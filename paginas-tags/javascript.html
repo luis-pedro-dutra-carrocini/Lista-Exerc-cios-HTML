@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML JavaScript</title>
+</head>
+<body>
+    <h2 id="h2">20 - HTML JavaScript</h2>
+    <div class="explicacao-topico">
+        <h3>20.1 - Sintaxe</h3>
+        <p>JavaScript torna as páginas HTML mais dinâmicas e interativas.</p>
+        <p>A tag HTML &lt;script> é usada para definir um script do lado do cliente (JavaScript).</p>
+        <p>Os usos comuns do JavaScript são manipulação de imagens, validação de formulários e alterações dinâmicas de conteúdo.</p>
+        <p>Para selecionar um elemento HTML, o JavaScript geralmente usa o document.getElementById()método.</p>
+        <p>Este exemplo de JavaScript altera algumas propriedades de um elemento HTML com id="demo", ao clicar em alguns bootões:</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            <b>&lt;script>
+                function mens(){<br>
+                    document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>
+                }<br><br>
+
+                function font(){<br>
+                    document.getElementById("demo").style.fontSize = "25px";<br>
+                }<br><br>
+
+                function color(){<br>
+                    document.getElementById("demo").style.color = "red";<br>
+                }<br><br>
+
+                function colorback(){<br>
+                    document.getElementById("demo").style.backgroundColor = "yellow";<br>
+                }<br><br>
+
+                function resetar(){<br>
+                    document.getElementById("demo").style.backgroundColor = "#DAD7D7";<br>
+                    document.getElementById("demo").style.color = "black";<br>
+                    document.getElementById("demo").style.fontSize = "15px";<br>
+                    document.getElementById("demo").innerHTML = "";<br>
+                }<br>
+            &lt;/script></b><br><br>
+
+            &lt;label id="demo">&lt;/label>&lt;br>&lt;br><br>
+            &lt;button onclick="mens()">Exibir mensagem&lt;/button><br>
+            &lt;button onclick="font()">Mudar Tamanho&lt;/button><br>
+            &lt;button onclick="color()">Mudar Cor&lt;/button><br>
+            &lt;button onclick="colorback()">Mudar Fundo&lt;/button><br>
+            &lt;button onclick="resetar()">Resetar&lt;/button>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <script>
+                function mens(){
+                    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+                }
+
+                function font(){
+                    document.getElementById("demo").style.fontSize = "25px";
+                }
+
+                function color(){
+                    document.getElementById("demo").style.color = "red";
+                }
+
+                function colorback(){
+                    document.getElementById("demo").style.backgroundColor = "yellow";
+                }
+
+                function resetar(){
+                    document.getElementById("demo").style.backgroundColor = "#DAD7D7";
+                    document.getElementById("demo").style.color = "black";
+                    document.getElementById("demo").style.fontSize = "15px";
+                    document.getElementById("demo").innerHTML = "";
+                }
+            </script>
+
+            <label id="demo"></label><br><br>
+            <button onclick="mens()">Exibir mensagem</button>
+            <button onclick="font()">Mudar Tamanho</button>
+            <button onclick="color()">Mudar Cor</button>
+            <button onclick="colorback()">Mudar Fundo</button>
+            <button onclick="resetar()">Resetar</button>
+        </div><br>
+
+        <h3>20.2 - Tag HTML &lt;noscript></h3>
+        <p>A tag HTML &lt;noscript> define um conteúdo alternativo a ser exibido aos usuários que possuem scripts desabilitados em seus navegadores ou possuem um navegador que não suporta scripts:</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;script><br>
+                document.getElementById("demo2").innerHTML = "Hello JavaScript!";<br>
+            &lt;/script><br>
+            &lt;noscript>Desculpe, seu navegador não suporta JavaScript!&lt;/noscript>
+        </div>
+    </div><br>
+</body>
+</html>

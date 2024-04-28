@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Styles</title>
+</head>
+<body>
+    <h2 id="h2">6 - HTML Styles</h2>
+    <div class="explicacao-topico">
+        <h3>Estilos HTML</h3>
+        <p>O atributo HTML <b>style</b> é usado para adicionar características/estilos a um elemento, como cor, fonte, tamanho e muito mais. Segue a estrutura:</p>
+        <p>&lt;nometag style='propriedade: valor;'></p>
+
+        <h3>6.1 - Cor de Fundo</h3>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            <p>&lt;h1 style='background-color: blue;'>Texto com o fundo em Azul&lt;/h1></p>
+            <p>&lt;p style='background-color: red;'>Texto com o fundo em Vermelho&lt;/p></p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <h1 style="background-color: blue;">Texto com o fundo em Azul</h1>
+            <p style="background-color: red;">Texto com o fundo em Vermelho</p>
+        </div><br>
+
+        <h3>6.2 - Cor do  Texto</h3>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            <p>&lt;h1 style='color: blue;'>Texto em Azul&lt;/h1></p>
+            <p>&lt;p style='color: red;'>Texto em Vermelho&lt;/p></p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <h1 style="color: blue;">Texto em Azul</h1>
+            <p style="color: red;">Texto em Vermelho</p>
+        </div><br>
+
+        <h3>6.3 - Fonte</h3>
+        <h4>Fonte:</h4>
+        <div class="explicacao-tag">
+            <p>&lt;h1 style='color: blue;'>Texto em Azul&lt;/h1></p>
+            <p>&lt;p style='color: red;'>Texto em Vermelho&lt;/p></p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <h1 style="font-family: verdana;">Texto na fonte Verdana</h1>
+            <p style="font-family: courier;">Texto na fonte Courier</p>
+        </div><br>
+
+        <h3>6.4 - Tamanho do Texto</h3>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            <p>&lt;h1 style='font-size: 300%;'>Tamanho em 300%&lt;/h1></p>
+            <p>&lt;p style='font-size: 160%;'>Tamanho em 160%&lt;/p></p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <h1 style="font-size: 300%;">Tamanho em 300%</h1>
+            <p style="font-size: 160%;">Tamanho em 160%</p>
+        </div><br>
+
+        <h3>6.5 - Alinhamento do Texto</h3>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            <p>&lt;h1 style="text-align: center;">Texto alinhado no centro.&lt;/h1></p>
+            <p>&lt;p style="text-align: right;">Texto alinhado para a direita.&lt;/p></p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <h1 style="text-align: center;">Texto alinhado no centro.</h1>
+            <p style="text-align: right;">Texto alinhado para a direita.</p>
+        </div><br>
+
+        <h3>CSS</h3>
+        <p>Cascading Style Sheets (CSS) é usado para formatar o layout de uma página da web. <br>
+            Com CSS, você pode controlar a cor, a fonte, o tamanho do texto, o espaçamento entre os elementos, como os elementos são posicionados e dispostos, quais imagens ou cores de fundo devem ser usadas, diferentes exibições para diferentes dispositivos e tamanhos de tela, e muito mais! <br>
+            CSS pode ser adicionado a documentos HTML de 3 maneiras: <br><br>
+            Inline - usando o atributo style dentro dos elementos HTML <br>
+            Interno - usando um elemento &lt;style> na seção &lt;head> <br>
+            Externo - usando um elemento &lt;link> para vincular a um arquivo CSS externo <br><br>
+            Vamos ver cada uma delas:
+        </p>
+
+        <h3>6.6 - Inline CSS</h3>
+        <p>O CSS embutido é usado para aplicar um estilo único a um único elemento HTML. Usa-se o atributo style de um elemento HTML. <br>
+            O exemplo a seguir define a cor do texto do elemento &lt;h1> como azul e a cor do texto do elemento &lt;p> como vermelho:
+        </p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;h1 style="color:blue;">Cabeçalho em Azul&lt;/h1> <br><br>
+            &lt;p style="color:red;">Parágrafo em Vermelho&lt;/p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <h1 style="color:blue;">Cabeçalho em Azul</h1>
+            <p style="color:red;">Parágrafo em Vermelho</p>
+        </div><br>
+
+        <h3>6.7 - Internal CSS</h3>
+        <p>O CSS interno é usado para definir um estilo para uma única página HTML, é definido na seção <head> de uma página HTML, dentro de um elemento &lt;style>.
+            O exemplo a seguir define a cor do texto de TODOS os elementos &lt;h1> (nessa página) como azul e a cor do texto de TODOS os elementos &lt;p> como vermelho:
+            </p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;!DOCTYPE html> <br>
+            &lt;html> <br>
+            &lt;head> <br>
+            <b>&lt;style> <br>
+            h1   {color: blue;} <br>
+            p    {color: red;} <br>
+            &lt;/style></b><br>
+            &lt;/head> <br>
+            &lt;body> <br>
+            &lt;h1>Isso é um Cabeçalho&lt;/h1> <br>
+            &lt;p>Isso é um Parágrafo&lt;/p> <br>
+            &lt;/body> <br>
+            &lt;/html>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <img src="img/exemploCSS_Internal.png" alt="Print do exemplo de CSS Internal" style="width: 50%; height: auto;">
+        </div><br>
+
+        <h3>6.8 - External CSS</h3>
+        <p>
+            Uma folha de estilo externa é usada para definir o estilo de muitas páginas HTML. <br>
+            Para usar uma folha de estilo externa, adicione um link para ela na seção &lt;head> de cada página HTML:
+        </p>
+        <h4>Código no arquivo HTML:</h4>
+        <div class="explicacao-tag">
+            &lt;!DOCTYPE html> <br>
+            &lt;html><br>
+            &lt;head><br>
+            <b>&lt;link rel="stylesheet" href="styles.css"></b><br>
+            &lt;/head><br>
+            &lt;body><br>
+            &lt;h1>Isso é um Cabeçalho&lt;/h1><br>
+            &lt;p>Isso é um Parágrafo&lt;p><br>
+            &lt;/body><br>
+            &lt;/html><br>
+        </div>
+
+        <p>O arquivo não deve conter nenhum código HTML e deve ser salvo com extensão .css. <br> Esta é a aparência do arquivo “styles.css”:</p>
+        <h4>Código no arquivo CSS:</h4>
+        <div class="explicacao-tag">
+            body {<br>
+                background-color: powderblue;<br>
+              } <br>
+              h1 { <br>
+                color: blue; <br>
+              } <br>
+              p { <br>
+                color: red; <br>
+              }             
+        </div><br>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <img src="img/exemploCSS_External.png" alt="Print do exemplo de CSS External" style="width: 50%; height: auto;">           
+        </div><br>
+    </div><br>
+</body>
+</html>

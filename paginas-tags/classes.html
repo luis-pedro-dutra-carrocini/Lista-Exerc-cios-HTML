@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Classes</title>
+</head>
+<body>
+    <h2 id="h2">17 - HTML Class</h2>
+    <div class="explicacao-topico">
+        <h3>17.1 - Sintaxe</h3>
+        <p>Para criar uma classe; escreva um ponto final (.), seguido por um nome de classe. Em seguida, defina as propriedades CSS entre chaves {}</p>
+        <p>Diferentes elementos HTML podem apontar para o mesmo nome de classe.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            <b>&lt;style> <br>
+                .city {<br>
+                  background-color: tomato;<br>
+                  color: white;<br>
+                  padding: 10px;<br>
+                }<br>
+            &lt;/style></b><br><br>
+
+            &lt;h2 class="city">London&lt;/h2><br>
+            &lt;p>London is the capital of England.&lt;/p><br><br>
+                
+            &lt;h2 class="city">Paris&lt;/h2><br>
+            &lt;p>Paris is the capital of France.&lt;/p><br><br>
+                
+            &lt;h2 class="city">Tokyo&lt;/h2><br>
+            &lt;p>Tokyo is the capital of Japan.&lt;/p>
+
+            &lt;p class="city">Paris is the capital of France</p>
+        </div><br>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <style>
+                .city {
+                  background-color: tomato;
+                  color: white;
+                  padding: 10px;
+                }
+            </style>
+            <h2 class="city">London</h2>
+            <p>London is the capital of England.</p>
+                
+            <h2 class="city">Paris</h2>
+            <p>Paris is the capital of France.</p>
+                
+            <h2 class="city">Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+
+            <p class="city">Paris is the capital of France</p>
+        </div><br>
+
+        <h3>17.2 - Com o JavaScript</h3>
+        <p>Veja o xemplo de como se obtém e altera as classes pelo JavaScript.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+          <b>&lt;script><br>
+            function clicar_botão() {<br>
+              var x = document.getElementsByClassName("city");<br>
+              for (var i = 0; i &lt; x.length; i++) {<br>
+                if (x[i].style.backgroundColor == 'tomato'){<br>
+                  x[i].style.backgroundColor = "green";<br>
+                }else{<br>
+                  x[i].style.backgroundColor = "tomato";<br>
+                }<br>
+              }<br>
+            }<br>
+        &lt;/script><br><br></b>
+        &lt;button onclick="clicar_botão()">Mudar cor DIV&lt;/button><br><br>
+        &lt;p class="city">Troque a cor de fundo da classe city.&lt;/p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <script>
+                function clicar_botão() {
+                  var x = document.getElementsByClassName("city");
+                  for (var i = 0; i < x.length; i++) {
+                    if (x[i].style.backgroundColor == 'tomato'){
+                      x[i].style.backgroundColor = "green";
+                    }else{
+                      x[i].style.backgroundColor = "tomato";
+                    }
+                  }
+                }
+            </script>
+            <button onclick="clicar_botão()">Mudar cor DIV</button>
+            <p class="city">Troque a cor de fundo da classe city.</p>
+        </div>
+        
+    </div><br>
+</body>
+</html>

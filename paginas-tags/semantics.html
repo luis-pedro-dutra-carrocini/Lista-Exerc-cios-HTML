@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML JavaScript</title>
+</head>
+<body>
+    <h2 id="h2">21 - HTML Semantics</h2>
+    <div class="explicacao-topico">
+        <h3>24.1 - O que são elementos semânticos?</h3>
+        <p>Um elemento semântico descreve claramente seu significado tanto para o navegador quanto para o desenvolvedor.</p>
+        <p>Exemplos de elementos não semânticos : &lt;div> e &lt;span>- Não diz nada sobre o seu conteúdo.</p>
+        <p>Exemplos de elementos semânticos: &lt;form>, &lt;table> e &lt;article>- Define claramente seu conteúdo.</p>
+        <p>Muitos sites contêm código HTML como: &lt;div id="nav"> &lt;div class="header"> &lt;div id="footer"> para indicar navegação, cabeçalho e rodapé.</p>
+        <p>Em HTML existem alguns elementos semânticos que podem ser usados ​​para definir diferentes partes de uma página web:</p>
+
+        <h4>Estruturação:</h4>
+        <div style="display: inline-block; width: 48%; padding-left: 30px">
+            &lt;article><br>
+            &lt;aside><br>
+            &lt;details><br>
+            &lt;figcaption><br>
+            &lt;figure><br>
+            &lt;footer><br>
+            &lt;header><br>
+            &lt;main><br>
+            &lt;mark><br>
+            &lt;nav><br>
+            &lt;section><br>
+            &lt;summary><br>
+            &lt;time>
+        </div>
+        <div style="display: inline-block; width: 48%;"><img src="img/estrutura_elementos..png" alt="Estrutura dos elementos semânticos"></div>
+        
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <script>
+                function mens(){
+                    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+                }
+
+                function font(){
+                    document.getElementById("demo").style.fontSize = "25px";
+                }
+
+                function color(){
+                    document.getElementById("demo").style.color = "red";
+                }
+
+                function colorback(){
+                    document.getElementById("demo").style.backgroundColor = "yellow";
+                }
+
+                function resetar(){
+                    document.getElementById("demo").style.backgroundColor = "#DAD7D7";
+                    document.getElementById("demo").style.color = "black";
+                    document.getElementById("demo").style.fontSize = "15px";
+                    document.getElementById("demo").innerHTML = "";
+                }
+            </script>
+
+            <label id="demo"></label><br><br>
+            <button onclick="mens()">Exibir mensagem</button>
+            <button onclick="font()">Mudar Tamanho</button>
+            <button onclick="color()">Mudar Cor</button>
+            <button onclick="colorback()">Mudar Fundo</button>
+            <button onclick="resetar()">Resetar</button>
+        </div><br>
+
+        <h3>21.2 - Tag HTML <&lt;section></h3>
+        <p>Esse elemento define uma seção em um documento.</p>
+        <p>Pode ser usado: Capítulos, Introdução, Novos itens, Informações de contato, etc.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;section><br>
+                &lt;h1>WWF&lt;/h1><br>
+                &lt;p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.&lt;/p><br>
+            &lt;/section><br><br>
+                
+            &lt;section><br>
+                &lt;h1>WWF's Panda symbol&lt;/h1><br>
+                &lt;p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.&lt;/p><br>
+            &lt;/section>
+        </div>
+
+        <h4>Exemplos:</h4>
+        <div class="explicacao-tag">
+            <section>
+                <h1>WWF</h1>
+                <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+            </section>
+                
+            <section>
+                <h1>WWF's Panda symbol</h1>
+                <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+            </section>
+        </div><br>
+
+        <h3>21.3 - Tag HTML <&lt;article></h3>
+        <p>Esse elemento especifica um conteúdo independente e autónomo.</p>
+        <p>Um artigo deve fazer sentido por si só e deve ser possível distribuí-lo independentemente do resto do site.</p>
+        <p>Pode ser usado: Postagens no fórum, Postagens no blog, Comentários do usuário, Cartões de produto, Artigos de jornal, etc.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;article><br>
+                &lt;h2>Google Chrome&lt;/h2><br>
+                &lt;p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!&lt;/p><br>
+            &lt;/article><br><br>
+                
+            &lt;article><br>
+                &lt;h2>Mozilla Firefox&lt;/h2><br>
+                &lt;p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.&lt;/p><br>
+            &lt;/article><br><br>
+                
+            &lt;article><br>
+                &lt;h2>Microsoft Edge&lt;/h2><br>
+                &lt;p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.&lt;/p><br>
+            &lt;/article>
+        </div>
+
+        <h4>Exemplos:</h4>
+        <div class="explicacao-tag">
+            <article>
+                <h2>Google Chrome</h2>
+                <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+            </article>
+                
+            <article>
+                <h2>Mozilla Firefox</h2>
+                <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+            </article>
+                
+            <article>
+                <h2>Microsoft Edge</h2>
+                <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+            </article>
+        </div><br>
+
+        <h3>21.4 - Tag HTML <&lt;header></h3>
+        <p>Esse elemento epresenta um contêiner para conteúdo introdutório ou um conjunto de links de navegação.</p>
+        <p>Você pode ter vários elementos &lt;header> em um documento HTML. No entanto, &lt;header> não pode ser colocado dentro de um &lt;footer> ou &lt;address> outro &lt;header>.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;article><br>
+                &lt;header><br>
+                  &lt;h1>What Does WWF Do?&lt;/h1><br>
+                  &lt;p>WWF's mission:&lt;/p><br>
+                &lt;/header><br>
+                &lt;p>WWF's mission is to stop the degradation of our planet's natural environment,
+                and build a future in which humans live in harmony with nature.&lt;/p><br>
+            &lt;/article>
+        </div>
+
+        <h4>Exemplos:</h4>
+        <div class="explicacao-tag">
+            <article>
+                <header>
+                  <h1>What Does WWF Do?</h1>
+                  <p>WWF's mission:</p>
+                </header>
+                <p>WWF's mission is to stop the degradation of our planet's natural environment,
+                and build a future in which humans live in harmony with nature.</p>
+            </article>
+        </div><br>
+
+        <h3>21.5 - Tag HTML <&lt;footer></h3>
+        <p>Esse elemento define um rodapé para um documento ou seção.</p>
+        <p>Você pode ter vários elementos &lt;footer> em um documento.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;footer><br>
+                &lt;p>Author: Hege Refsnes&lt;/p><br>
+                &lt;p>&lt;a href="mailto:hege@example.com">hege@example.com&lt;/a>&lt;/p><br>
+            &lt;/footer>
+        </div>
+
+        <h4>Exemplos:</h4>
+        <div class="explicacao-tag">
+            <article>
+                <footer>
+                    <p>Autor: Luís Pedro</p>
+                    <p><a href="mailto:hege@example.com">luispedrocarrocini@gmail.com</a></p>
+                </footer>
+            </article>
+        </div><br>
+
+        <h3>21.6 - Tag HTML <&lt;nav></h3>
+        <p>Esse elemento define um conjunto de links de navegação.</p>
+        <p>Observe que nem todos os links de um documento devem estar dentro de um <nav>. Ele destina-se apenas a grandes blocos de links de navegação.</p>
+        <p>Navegadores, como leitores de tela para usuários com deficiência, podem usar esse elemento para determinar se devem omitir a renderização inicial desse conteúdo.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;nav><br>
+                &lt;a href="#">HTML&lt;/a> |<br>
+                &lt;a href="#">CSS&lt;/a> |<br>
+                &lt;a href="#">JavaScript&lt;/a> |<br>
+                &lt;a href="#">jQuery&lt;/a><br>
+            &lt;/nav>
+        </div>
+
+        <h4>Exemplos:</h4>
+        <div class="explicacao-tag">
+            <nav>
+                <a href="#">HTML</a> |
+                <a href="#">CSS</a> |
+                <a href="#">JavaScript</a> |
+                <a href="#">jQuery</a>
+            </nav>
+        </div><br>
+
+        <h3>21.7 - Tag HTML <&lt;aside></h3>
+        <p>Esse elemento define algum conteúdo além daquele em que está colocado (como uma barra lateral).</p>
+        <p>O conteúdo deve estar indiretamente relacionado ao conteúdo circundante.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;style><br>
+                aside {<br>
+                  width: 30%;<br>
+                  padding-left: 15px;<br>
+                  margin-left: 15px;<br>
+                  float: right;<br>
+                  font-style: italic;<br>
+                  background-color: lightgray;<br>
+                }<br>
+            &lt;/style><br><br>
+                
+            &lt;p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!&lt;/p><br><br>
+                
+            &lt;aside><br>
+            &lt;p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.&lt;/p><br>
+            &lt;/aside><br><br>
+                
+            &lt;p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!&lt;/p><br>
+            &lt;p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!&lt;/p><br>
+        </div>
+
+        <h4>Exemplos:</h4>
+        <div class="explicacao-tag">
+            <style>
+                aside {
+                  width: 30%;
+                  padding-left: 15px;
+                  margin-left: 15px;
+                  float: right;
+                  font-style: italic;
+                  background-color: lightgray;
+                }
+            </style>
+                
+            <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+                
+            <aside>
+            <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+            </aside>
+                
+            <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+            <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+        </div><br>
+
+        <h3>21.8 - &lt;figure> e &lt;figcaption></h3>
+        <p>A tag &lt;figure> especifica conteúdo independente, como ilustrações, diagramas, fotos, listagens de códigos, etc.</p>
+        <p>A  tag &lt;figcaption> define uma legenda para um &lt;figure>. O &lt;figcaption> pode ser colocado como o primeiro ou o último filho de um &lt;figure>.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;figure><br>
+                &lt;img src="img/the_rock.jpg" alt="The Rock"><br>
+                &lt;figcaption>Fig1. - The Rock, Sombrancelha levantada.&lt;/figcaption><br>
+            &lt;/figure>
+        </div>
+
+        <h4>Exemplos:</h4>
+        <div class="explicacao-tag">
+            <figure>
+                <img src="img/the_rock.jpg" alt="The Rock">
+                <figcaption>Fig1. - The Rock, Sombrancelha levantada.</figcaption>
+            </figure>
+        </div><br>
+    </div><br>
+</body>
+</html>

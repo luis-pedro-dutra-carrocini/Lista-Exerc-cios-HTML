@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Div</title>
+</head>
+<body>
+    <h2 id="h2">16 - HTML Div</h2>
+    <div class="explicacao-topico">
+        <h3>16.1 - Divisão HTML</h3>
+        <p>O elemento &lt;div> é por padrão um elemento de bloco, o que significa que ocupa toda a largura disponível e vem com quebras de linha antes e depois. Ele ocupa toda a largura disponível, também não possui atributos obrigatórios, mas style, classe idsão comuns.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            Lorota &lt;div style="background-color: burlywood;">I am a div&lt;/div> mais lorota.
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            Lorota <div style="background-color: burlywood;">Eu sou uma DIV</div> mais lorota.
+        </div><br>
+
+        <h3>16.2 - Div como um contêiner</h3>
+        <p>O elemento &lt;div> é frequentemente usado para agrupar seções de uma página da web.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;div style="background-color: burlywood;"><br>
+                &lt;h2>London&lt;/h2><br>
+                &lt;p>London is the capital city of England.&lt;/p><br>
+                &lt;p>London has over 13 million inhabitants.&lt;/p><br>
+              &lt;/div><br><br>
+              
+              &lt;div style="background-color: rgb(161, 154, 145);"><br>
+                &lt;h2>Oslo&lt;/h2><br>
+                &lt;p>Oslo is the capital city of Norway.&lt;/p><br>
+                &lt;p>Oslo has over 600.000 inhabitants.&lt;/p><br>
+              &lt;/div><br><br>
+              
+              &lt;div style="background-color: #454545;"><br>
+                &lt;h2>Rome&lt;/h2><br>
+                &lt;p>Rome is the capital city of Italy.&lt;/p><br>
+                &lt;p>Rome has almost 3 million inhabitants.&lt;/p><br>
+              &lt;/div>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <div style="background-color: burlywood;">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+                <p>London has over 13 million inhabitants.</p>
+              </div>
+              
+              <div style="background-color: rgb(161, 154, 145);">
+                <h2>Oslo</h2>
+                <p>Oslo is the capital city of Norway.</p>
+                <p>Oslo has over 600.000 inhabitants.</p>
+              </div>
+              
+              <div style="background-color: #454545;">
+                <h2>Rome</h2>
+                <p>Rome is the capital city of Italy.</p>
+                <p>Rome has almost 3 million inhabitants.</p>
+              </div>
+        </div><br>
+
+        <h3>16.2 - Div Lado a Lado - Float</h3>
+        <p>É possivel colocar um div ao lado da outra, utilizando o atributo float do CSS.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;div style="background-color: burlywood; width:33%; float:left;"><br>
+                &lt;h2>London&lt;/h2><br>
+                &lt;p>London is the capital city of England.&lt;/p><br>
+                &lt;p>London has over 13 million inhabitants.&lt;/p><br>
+              &lt;/div><br><br>
+              
+              &lt;div style="background-color: rgb(161, 154, 145); width:33%; float:left;"><br>
+                &lt;h2>Oslo&lt;/h2><br>
+                &lt;p>Oslo is the capital city of Norway.&lt;/p><br>
+                &lt;p>Oslo has over 600.000 inhabitants.&lt;/p><br>
+              &lt;/div><br><br>
+              
+              &lt;div style="background-color: #454545;  width:33%; float:left;"><br>
+                &lt;h2>Rome&lt;/h2><br>
+                &lt;p>Rome is the capital city of Italy.&lt;/p><br>
+                &lt;p>Rome has almost 3 million inhabitants.&lt;/p><br>
+              &lt;/div>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag" style="height: 150px;">
+            <div style="background-color: burlywood; width:33%; float:left;">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+                <p>London has over 13 million inhabitants.</p>
+              </div>
+              
+              <div style="background-color: rgb(161, 154, 145); width:33%; float:left;">
+                <h2>Oslo</h2>
+                <p>Oslo is the capital city of Norway.</p>
+                <p>Oslo has over 600.000 inhabitants.</p>
+              </div>
+              
+              <div style="background-color: #454545; width:33%; float:left;">
+                <h2>Rome</h2>
+                <p>Rome is the capital city of Italy.</p>
+                <p>Rome has almost 3 million inhabitants.</p>
+              </div>
+        </div><br>
+
+        <h3>16.3 - Div Lado a Lado - Inline-block</h3>
+        <p>Também é possivel colocar um div ao lado da outra, utilizando o atributo inline-block do CSS.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;div style="background-color: burlywood; width: 30%; display: inline-block;"><br>
+                &lt;h2>London&lt;/h2><br>
+                &lt;p>London is the capital city of England.&lt;/p><br>
+                &lt;p>London has over 13 million inhabitants.&lt;/p><br>
+              &lt;/div><br><br>
+              
+              &lt;div style="background-color: rgb(161, 154, 145); width: 30%; display: inline-block;"><br>
+                &lt;h2>Oslo&lt;/h2><br>
+                &lt;p>Oslo is the capital city of Norway.&lt;/p><br>
+                &lt;p>Oslo has over 600.000 inhabitants.&lt;/p><br>
+              &lt;/div><br><br>
+              
+              &lt;div style="background-color: #454545; width: 30%; display: inline-block;"><br>
+                &lt;h2>Rome&lt;/h2><br>
+                &lt;p>Rome is the capital city of Italy.&lt;/p><br>
+                &lt;p>Rome has almost 3 million inhabitants.&lt;/p><br>
+              &lt;/div>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag" style="height: 150px;">
+            <div style="background-color: burlywood; width: 30%; display: inline-block;">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+                <p>London has over 13 million inhabitants.</p>
+              </div>
+              
+              <div style="background-color: rgb(161, 154, 145); width: 30%; display: inline-block;">
+                <h2>Oslo</h2>
+                <p>Oslo is the capital city of Norway.</p>
+                <p>Oslo has over 600.000 inhabitants.</p>
+              </div>
+              
+              <div style="background-color: #454545; width: 30%; display: inline-block;">
+                <h2>Rome</h2>
+                <p>Rome is the capital city of Italy.</p>
+                <p>Rome has almost 3 million inhabitants.</p>
+              </div>
+        </div><br>
+    </div><br>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body{
+    background-color: #7B85AD;
+    height: 100%;
+    margin: 0;
+    padding-right: 10px;
+    font-family: Arial, sans-serif;
+}
+
+#h1{
+    text-align: center;
+    background-color: #515E91;
+    padding: 7px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
+}
+
+#h2{
+    padding: 7px;
+    background-color: #515E91;
+    margin: 0;
+    margin-top: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.explicacao-tag{
+    padding: 15px;
+    padding-left: 15px;
+    background-color: rgb(218, 215, 215);
+    border-radius: 10px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
+}
+
+.explicacao-topico{
+    padding: 7px;
+    background-color: rgb(194, 194, 194);
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+table{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th{
+    padding: 10px;
+    background-color: #96D4D4;
+    border: 1px solid black;
+}
+  
+  .sidenav {
+    height: 100%;
+    width: 235px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 3px 3px 3px 15px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 235px; /* Same as the width of the sidenav */
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.content iframe {
+  width: 100%;
+  height: calc(100% - 40px);
+}

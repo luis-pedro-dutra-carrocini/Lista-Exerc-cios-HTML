@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Links</title>
+</head>
+<body>
+    <h2 id="h2">11 - HTML Links</h2>
+    <div class="explicacao-topico">
+        <p>Links HTML são hiperlinks. Você pode clicar em um link e ir para outro documento. Quando você move o mouse sobre um link, a seta do mouse se transforma em uma pequena mão..</p>
+
+        <h3>11.1 - Sintaxe</h3>
+        <p>
+            A tag HTML &lt;a> define um hiperlink. O atributo mais importante do &lt;a> elemento é o atributo href, que indica o destino do link. O texto do link é a parte que ficará visível ao leitor. Clicar no texto do link enviará o leitor ao endereço URL especificado. <br><br>
+            Ela possui a seguinte sintaxe: &lt;a href="url">link text&lt;/a> <br><br>
+            Segue um exemplo abaixo:
+                
+        </p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;a href="https://www.w3schools.com/">Dê um aolhada em W3Schools.com!&lt;/a>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <a href="https://www.w3schools.com/">Dê um aolhada em W3Schools.com!</a>
+        </div><br>
+
+        <p>Por padrão, os links aparecerão da seguinte forma em todos os navegadores: <br><br>
+            Um link não visitado está sublinhado e azul <br>
+            Um link visitado está sublinhado e roxo <br>
+            Um link ativo está sublinhado e vermelho <br>
+        </p>
+
+        <h3>11.2 - Atributo de destino - TARGET</h3>
+        <p>
+            Por padrão, a página vinculada será exibida na janela atual do navegador. Para alterar isso, você deve especificar outro destino para o link. O atributo target especifica onde abrir o documento vinculado, podendo ter um dos seguintes valores: <br><br>
+            _self- Abre o documento na mesma janela/aba em que foi clicado (Padrão) <br>
+            _blank- Abre o documento em uma nova janela ou guia <br>
+            _parent- Abre o documento no quadro pai <br>
+            _top- Abre o documento em todo o corpo da janela <br>
+        </p>
+
+        <h3>11.3 - Atributo de destino - TARGET</h3>
+        <p>
+            Ambos os exemplos acima usam um URL absoluto (um endereço da web completo) no hrefatributo. <br>
+            Um link local (um link para uma página dentro do mesmo site) é especificado com um URL relativo (sem a parte “https://www”):
+        </p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;h2>URLs Absolutas&lt;/h2> <br>
+            &lt;p>&lt;a href="https://www.w3.org/">W3C&lt;/a>&lt;/p><br>
+            &lt;p>&lt;a href="https://www.google.com/">Google&lt;/a>&lt;/p>&lt;br><br><br>
+            &lt;h2>URLs Relativas&lt;/h2><br>
+            &lt;p>&lt;a href="exemplos/teste2.html">HTML Images&lt;/a>&lt;/p><br>
+            &lt;p>&lt;a href="exemplos/teste.html">CSS Tutorial&lt;/a>&lt;/p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <h2>URLs Absolutas</h2>
+            <p><a href="https://www.w3.org/">W3C</a></p>
+            <p><a href="https://www.google.com/">Google</a></p><br>
+            <h2>URLs Relativas</h2>
+            <p><a href="exemplos/teste2.html">HTML Imagens</a></p>
+            <p><a href="exemplos/teste.html">Arquivo Teste</a></p>
+        </div><br>
+
+        <h3>11.4 - Imagem como link</h3>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;a href="https://www.w3schools.com/">
+            &lt;img src="img/html.gif" alt="HTML tutorial" style="width:42px; height:42px;">
+            &lt;/a> 
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <a href="https://www.w3schools.com/">
+            <img src="img/html.gif" alt="HTML tutorial" style="width:150px; height:100px;">
+            </a>  
+        </div><br>
+
+        <h3>11.5 - Link para um endereço de e-mail</h3>
+        <p>Use <b>mailto:</b> dentro do hrefatributo para criar um link que abra o programa de e-mail do usuário (para permitir que ele envie um novo e-mail):</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;a href="mailto:luispedrocarrocini@gmail.com">Converse comigo atraves do email</a>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <a href="mailto:luispedrocarrocini@gmail.com">Converse comigo atraves do email</a>
+        </div><br>
+
+        <h3>11.6 - Botão como um link</h3>
+        <p>
+            Para usar um botão HTML como link, você deve adicionar algum código JavaScript. <br>
+            JavaScript permite especificar o que acontece em determinados eventos, como o clique de um botão:
+        </p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;button onclick="document.location='exemplos/teste.html'">Página Interna&lt;/button>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <button onclick="document.location='exemplos/teste.html'">Página Interna</button>
+        </div><br>
+
+        <h3>11.7 - Títulos de links</h3>
+        <p>
+            O atributo title específica informações extras sobre um elemento. As informações geralmente são mostradas como um texto de dica de ferramenta quando o mouse passa sobre o elemento.
+        </p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;a href="https://www.w3schools.com/html/" title="Ir para W3Schools HTML Section">Dê uma olhadaem outro HTML Tutorial&lt;/a>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <a href="https://www.w3schools.com/html/" title="Ir para W3Schools HTML Section">Dê uma olhadaem outro HTML Tutorial</a>
+        </div><br>
+    </div><br>
+</body>
+</html>

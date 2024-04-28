@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Table</title>
+</head>
+<body>
+    <h2 id="h2">13 - HTML Table</h2>
+    <div class="explicacao-topico">
+        <h3>Tabelas HTML</h3>
+        <p>As tabelas HTML permitem que os desenvolvedores da web organizem os dados em linhas e colunas.</p>
+        
+        <h3>Definir uma tabela HTML</h3>
+        <p>Uma tabela em HTML consiste em células de tabela dentro de linhas e colunas. Uma célula de tabela pode conter todos os tipos de elementos HTML: texto, imagens, listas, links, outras tabelas, etc.</p>
+        <p>Para melhor entendimento exemplos veja as definições dos componentes da tabela:</p>
+        <p>
+            td - Significa dados da tabela. <br>
+            tr - Significa linha da tabela. <br>
+            th - Significa cabeçalho da tabela. <br>
+        </p>
+        <h4>Código Básico:</h4>
+        <div class="explicacao-tag">
+            &lt;table><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th>Company&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th>Contact&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th>Country&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>Alfreds Futterkiste&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>Maria Anders&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>Germany&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>Centro comercial Moctezuma&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>Francisco Chang&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>Mexico&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &lt;/table>
+        </div>
+
+        <p>Você pode melhorar a sua aparência utilizando o CSS. Veja a explicação de alguns atributos:</p>
+        <p>
+            border - Para adicionar uma borda nos elementos da tabela. <br>
+            border-collapse: collapse - Para evitar bordas duplas.
+            background-color - Definir uma cor de fundo para cada elemento da tabela.
+        </p>
+        <h4>Código CSS:</h4>
+        <div class="explicacao-tag">
+            <p>
+                table{<br>
+                    text-align: center;<br>
+                    border: 1px solid black;<br>
+                    border-collapse: collapse;<br>
+                }<br><br>
+                
+                td, th{<br>
+                    padding: 10px;<br>
+                    background-color: #96D4D4;<br>
+                    border: 1px solid black;<br>
+                }
+            </p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <table>
+                <tr>
+                  <th>Empresa</th>
+                  <th>Contato</th>
+                  <th>Localização (Sede)</th>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria</td>
+                  <td>Alemahana</td>
+                </tr>
+                <tr>
+                  <td>Centro Comercial Moctezuma</td>
+                  <td>Francisco</td>
+                  <td>México</td>
+                </tr>
+            </table>
+        </div><br>
+    </div><br>
+</body>
+</html>

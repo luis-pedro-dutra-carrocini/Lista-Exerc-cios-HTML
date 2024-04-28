@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Iframes</title>
+</head>
+<body>
+    <h2 id="h2">19 - HTML Iframe</h2>
+    <div class="explicacao-topico">
+        <h3>19.1 - Sintaxe</h3>
+        <p>A tag HTML &lt;iframe> especifica um quadro embutido.</p>
+        <p>Um quadro embutido é usado para incorporar outro documento no documento HTML atual.</p>
+        <p>É uma boa prática sempre incluir um titleatributo para o arquivo &lt;iframe>. Isso é usado por leitores de tela para ler qual é o conteúdo do iframe. </p>
+        <p>Um iframe pode ser usado como quadro de destino para um link. O targetatributo do link deve referir-se ao atributo name do iframe.</p>
+        <p>Sintaxe: &lt;iframe src="url" title="description">&lt;/iframe></p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;iframe src="exemplos/capitulos.html" style="height:200px;width:500px;" title="Iframe Exemplo">&lt;/iframe>&lt;br><br><br>
+            &lt;p>&lt;a href="https://www.w3schools.com" target="iframe_a">W3Schools.com&lt;/a>&lt;/p><br>
+            &lt;p>&lt;a href="exemplos/capitulos.html" target="iframe_a">Capítulos&lt;/a>&lt;/p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <iframe src="exemplos/capitulos.html" style="height:200px;width:500px;" title="Iframe Exemplo" name="iframe_a"></iframe><br>
+            <p><a href="exemplos/teste.html" target="iframe_a">Teste</a></p>
+            <p><a href="exemplos/capitulos.html" target="iframe_a">Capítulos</a></p>
+        </div>
+
+    </div><br>
+</body>
+</html>

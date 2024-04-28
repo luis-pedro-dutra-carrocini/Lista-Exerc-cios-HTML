@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TG's Básicas do HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/html.png">
+</head>
+<body>
+
+    
+
+    <h2 id="h2">12 - HTML Images (EXTRA)</h2>
+    <div class="explicacao-topico">
+        <p>
+            A tag HTML &lt;img> é usada para incorporar uma imagem em uma página da web. As imagens não são tecnicamente inseridas em uma página da web; as imagens estão vinculadas a páginas da web. <br> 
+            Ela cria um espaço de retenção para a imagem referenciada, contendo apenas atributos e não possui tag de fechamento. Sendo dois deles obrigatórios: <br><br>  
+            src - Especifica o caminho para a imagem <br>
+            alt - Especifica um texto alternativo para a imagem
+        </p><br>
+
+        <h3>12.1 - Atributo Src e Alt</h3>
+        <p>
+            O atributo obrigatório src especifica o caminho (URL) para a imagem.
+            Quando uma página web carrega, é o navegador, naquele momento, que obtém a imagem de um servidor web e a insere na página. Portanto, certifique-se de que a imagem realmente permaneça no mesmo lugar em relação à página web, caso contrário seus visitantes receberão um ícone de link quebrado. O ícone do link quebrado e o alttexto serão mostrados se o navegador não conseguir encontrar a imagem. <br><br>
+
+            O atributo obrigatório alt fornece um texto alternativo para uma imagem, se o usuário por algum motivo não puder visualizá-la (por causa de uma conexão lenta, um erro no atributo src ou se o usuário usar um leitor de tela).
+            O valor do alt deve descrever a imagem, pois se um navegador não conseguir encontrar uma imagem, ele exibirá o seu valor:
+
+        </p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;img src="flores_china.jpg" alt="Flores na China">
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <img src="flores_china.jpg" alt="Flores na China">
+        </div><br>
+
+        <h3>12.2 - Tamanho da imagem - Width e Height</h3>
+        <p>
+            Os atributos widthe height sempre definem a largura e a altura da imagem em pixels. <br>
+            Você pode usar o style atributo para especificar a largura e a altura de uma imagem. Ou você pode usar os atributos widthe e height:
+        </p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;img src="img/walle.jpg" alt="Imagem do Walle do desenho" style="width:500px; height:600px;">
+            &lt;img src="img/walle.jpg" alt="Imagem do Walle do desenho" width="500" height="600">
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <img src="img/walle.jpg" alt="Imagem do Walle do desenho" style="width:400px; height:300px;">
+            <img src="img/walle.jpg" alt="Imagem do Walle do desenho" width="400" height="300">
+        </div><br>
+
+        <p>Os atributos width, heighte style são todos válidos em HTML. No entanto, se usar o atributo style,  as folhas de estilos não alteraram o tamanho das imagens.</p>
+
+        <h3>12.3 - Imagens em outra pasta</h3>
+        <p>
+            Se você tiver suas imagens em uma subpasta, deverá incluir o nome da pasta no atributo src:
+        </p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;img src="img/css.gif" alt="CSS Gif" style="width:150px; height:150px;">
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <img src="img/css.gif" alt="CSS Gif" style="width:150px;height:150px;">
+        </div><br>
+
+        <h3>12.4 - Imagens em outro servidor/site</h3>
+        <p>
+            Alguns sites apontam para uma imagem em outro servidor. Para apontar para uma imagem em outro servidor, você deve especificar uma URL absoluta (completa) no atributo src:
+        </p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;img src="https://miro.medium.com/v2/resize:fit:1400/1*1Gh0_hx4rVTiAcJKge1KQA.gif" alt="Meme do CSS JavaScript e HHTML" style="width:300px; height:200px;">
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*1Gh0_hx4rVTiAcJKge1KQA.gif" alt="Meme do CSS JavaScript e HHTML" style="width:300px;height:200px;">
+        </div>
+
+        <p>Como podemos ver nos exemplos anteriores, o HTML permite a exibição de GIF's animados.</p>
+
+        <h3>12.5 - Imagem flutuante</h3>
+        <p>
+            Use a propriedade float do CSS para deixar a imagem flutuar à direita ou à esquerda de um texto:
+        </p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;p>&lt;img src="img/emoji_sombrancelhalevantada.png" alt="Emoji Sombrancelha levantada" style="float:right;width:42px;height:42px;">A imagem flutuará à direita do texto. A imagem flutuará à direita do texto.
+            &lt;/p> <br><br>
+
+            &lt;p>&lt;img src="img/emoji_sombrancelhalevantada.png" alt="Emoji Sombrancelha levantada" style="float:left;width:42px;height:42px;">A imagem flutuará à direita do texto. A imagem flutuará à direita do texto.
+            &lt;/p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <p><img src="img/emoji_sombrancelhalevantada.png" alt="Emoji Sombrancelha levantada" style="float:right;width:42px;height:42px;">A imagem flutuará à direita do texto. A imagem flutuará à direita do texto.
+            </p>
+
+            <p><img src="img/emoji_sombrancelhalevantada.png" alt="Emoji Sombrancelha levantada" style="float:left;width:42px;height:42px;">A imagem flutuará à direita do texto. A imagem flutuará à direita do texto.
+            </p>
+        </div><br>
+
+        <h3>12.6 - Mapas de imagens</h3>
+        <p>
+            A tag HTML &lt;map> define um mapa de imagem. Um mapa de imagem é uma imagem com áreas clicáveis. As áreas são definidas com uma ou mais &lt;area> tags. <br>
+            Tente clicar no computador, telefone ou na xícara de café da imagem abaixo:
+                
+        </p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;img src="img/workplace.jpg" alt="Workplace" usemap="#workmap"><br>
+            &lt;map name="workmap"><br>
+                &lt;area shape="rect" coords="34,44,270,350" alt="Computador" href="exemplos/computador.html"><br>
+                &lt;area shape="rect" coords="290,172,333,250" alt="Telefone" href="https://www.w3schools.com/html/html_images_imagemap.asp"><br>
+                &lt;area shape="circle" coords="337,300,44" alt="Chícara" href="exemplos/chicara.html"><br>
+            &lt;/map>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <img src="img/workplace.jpg" alt="Workplace" usemap="#workmap">
+            <map name="workmap">
+                <area shape="rect" coords="34,44,270,350" alt="Computador" href="exemplos/computador.html">
+                <area shape="rect" coords="290,172,333,250" alt="Telefone" href="https://www.w3schools.com/html/html_images_imagemap.asp">
+                <area shape="circle" coords="337,300,44" alt="Chícara" href="exemplos/chicara.html">
+            </map>
+        </div>
+
+        <p>
+            Use o elemento &lt;map> HTML para definir um mapa de imagem. <br>
+            Use o elemento &lt;area> HTML para definir as áreas clicáveis no mapa de imagem. <br>
+            Use o atributo usemap HTML do &lt;img> elemento para apontar para um mapa de imagem. <br>
+            Você deve definir o formato da área clicável (shap) e pode escolher um destes valores: <br><br>
+            rect- define uma região retangular <br>
+            circle- define uma região circular <br>
+            poly- define uma região poligonal <br>
+            default- define toda a região <br> 
+        </p><br>
+
+        <h3>12.7 - Imagem de fundo em um elemento HTML</h3>
+        <p>Se a imagem de fundo for menor que o elemento, a imagem se repetirá, horizontal e verticalmente, até chegar ao final do elemento:</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;div class="explicacao-tag" style="background-image: url('img/the_rock.jpg'); height: 300px;">&lt;/div>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag" style="background-image: url('img/the_rock.jpg'); height: 300px;">
+        </div><br>
+
+        <p>
+            Para evitar que a imagem de fundo se repita, defina a propriedade  background-repeat como no-repeat. <br>
+            Se quiser que a imagem de fundo cubra todo o elemento, você pode definir a propriedade background-size como cover.
+        </p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;div style="background-image: url('img/the_rock.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; width: 300px; height: 300px;">&lt;/div>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag" style="background-image: url('img/the_rock.jpg'); background-repeat: no-repeat; background-size: cover; width: 300px; height: 300px;">
+        </div><br>
+    </div><br>
+
+
+    
+
+    
+
+    
+</body>
+</html>

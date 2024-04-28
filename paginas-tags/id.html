@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Id</title>
+</head>
+<body>
+    <h2 id="h2">18 - HTML ID</h2>
+    <div class="explicacao-topico">
+        <h3>18.1 - Sintaxe</h3>
+        <p>O atributo HTML idé usado para especificar um ID exclusivo para um elemento HTML. Você não pode ter mais de um elemento com o mesmo id em um documento HTML.</p>
+        <p>Ele é usado para apontar para uma declaração de estilo específica em uma folha de estilos. Também é usado por JavaScript para acessar e manipular o elemento com o id específico.</p>
+        <p>A sintaxe para id é: escreva um caractere hash (#), seguido por um nome de id. Em seguida, defina as propriedades CSS entre chaves {}.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;style><br>
+                #myHeader {<br>
+                  background-color: lightblue;<br>
+                  color: black;<br>
+                  padding: 40px;<br>
+                  text-align: center;<br>
+                }<br>
+            &lt;/style><br>  
+            &lt;h1 id="myHeader">My Header&lt;/h1>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <style>
+                #myHeader {
+                  background-color: lightblue;
+                  color: black;
+                  padding: 40px;
+                  text-align: center;
+                }
+            </style>
+                
+            <h1 id="myHeader">My Header</h1>
+        </div><br>
+
+        <h3>18.2 - Marcadores HTML com ID e links</h3>
+        <p>Os marcadores HTML são usados ​para permitir que os leitores acessem partes específicas de uma página da web. Os marcadores podem ser úteis se a sua página for muito longa. Para usar um marcador, você deve primeiro criá-lo e depois adicionar um link a ele. Então, quando o link for clicado, a página rolará até o local com o marcador.</p>
+
+        <p>Primeiro, crie um marcador com o atributo id. Em seguida, adicione um link para o marcador ("Pular para o Capítulo 4"), na mesma página. Ou adicione um link ao marcador ("Pular para o Capítulo 4"), de outra página.</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;h2 id="C4">Página atual - Capítulo $&lt;/h2>&lt;br><br>
+            &lt;a href="#C4">Ir para o Capítulo 4 desta página.&lt;/a>&lt;br>&lt;br><br><br>
+            &lt;a href="exemplos/capitulos.html#C4" target="_blank">Ir para o Capítulo 4 de outra página.&lt;/a>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <h2 id="C4">Página atual - Capítulo 4</h2><br>
+            <a href="#C4">Ir para o Capítulo 4 desta página.</a><br><br>
+            <a href="exemplos/capitulos.html#C4" target="_blank">Ir para o Capítulo 4 de outra página.</a>
+        </div>
+    </div><br>
+
+    <h3>18.3 - Usando o atributo id em JavaScript</h3>
+        <p>O atributo id também pode ser usado por JavaScript para realizar algumas tarefas para aquele elemento específico.</p>
+
+        <p>Primeiro, crie um marcador com o atributo id. Em seguida, adicione um link para o marcador ("Pular para o Capítulo 4"), na mesma página. Ou adicione um link ao marcador ("Pular para o Capítulo 4"), de outra página.</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;script><br>
+                x = 0;<br>
+                function mudar_texto() {<br>
+                    if (x == 0){<br>
+                        document.getElementById("lbl_texto").innerHTML = "Sextou não grita... Quin!!!";<br>
+                        x = 1;<br>
+                    }else{<br>
+                        document.getElementById("lbl_texto").innerHTML = "O texto será mudado...";<br>
+                        x = 0;<br>
+                    }<br>
+                }<br>
+            &lt;/script><br><br>
+            &lt;b>&lt;label id="lbl_texto">O texto será mudado...&lt;/label>&lt;/b> &lt;br>&lt;br><br>
+            &lt;button onclick="mudar_texto()">Mudar texto&lt;/button>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <script>
+                x = 0;
+                function mudar_texto() {
+                    if (x == 0){
+                        document.getElementById("lbl_texto").innerHTML = "Sextou não grita... Quin!!!";
+                        x = 1;
+                    }else{
+                        document.getElementById("lbl_texto").innerHTML = "O texto será mudado...";
+                        x = 0;
+                    }
+                }
+            </script>
+            <b><label id="lbl_texto">O texto será mudado...</label></b> <br><br>
+            <button onclick="mudar_texto()">Mudar texto</button>
+        </div>
+    </div><br>
+</body>
+</html>
