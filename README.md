@@ -7,7 +7,7 @@ Site desenvolvido nas linguages HTML e CSS, com o objetivo de cumprir uma ativid
 Para obter uma cópia basta baixar os arquivos todos os arquivos e pastas contidos nesse repositório, executando-os em um navagador (Chrome, Edge, FireFox, etc.).
 
 
-## 🚀 [Link do Site](https://luis-pedro-dutra-carrocini.github.io/Mini-Pi-HTML5-CSS3/index.html)
+## 🚀 [Link do Site](https://luis-pedro-dutra-carrocini.github.io/Lista-Exercicios-HTML/index.html)
 
 
 ## 📦 Aparência
