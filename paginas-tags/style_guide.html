@@ -9,93 +9,320 @@
 <body>
     <h2 id="h2">22 - HTML Style Guide</h2>
     <div class="explicacao-topico">
-        <h3>20.1 - Sintaxe</h3>
-        <p>JavaScript torna as páginas HTML mais dinâmicas e interativas.</p>
-        <p>A tag HTML &lt;script> é usada para definir um script do lado do cliente (JavaScript).</p>
-        <p>Os usos comuns do JavaScript são manipulação de imagens, validação de formulários e alterações dinâmicas de conteúdo.</p>
-        <p>Para selecionar um elemento HTML, o JavaScript geralmente usa o document.getElementById()método.</p>
-        <p>Este exemplo de JavaScript altera algumas propriedades de um elemento HTML com id="demo", ao clicar em alguns bootões:</p>
+        <h3>22.1 - Introdução</h3>
+        <p>Um código HTML consistente, limpo e organizado torna mais fácil para outras pessoas lerem e compreenderem seu código.</p>
+        <p>Aqui estão algumas diretrizes e dicas para criar um bom código HTML.</p><br>
 
-        <h4>Código:</h4>
-        <div class="explicacao-tag">
-            <b>&lt;script>
-                function mens(){<br>
-                    document.getElementById("demo").innerHTML = "Hello JavaScript!";<br>
-                }<br><br>
-
-                function font(){<br>
-                    document.getElementById("demo").style.fontSize = "25px";<br>
-                }<br><br>
-
-                function color(){<br>
-                    document.getElementById("demo").style.color = "red";<br>
-                }<br><br>
-
-                function colorback(){<br>
-                    document.getElementById("demo").style.backgroundColor = "yellow";<br>
-                }<br><br>
-
-                function resetar(){<br>
-                    document.getElementById("demo").style.backgroundColor = "#DAD7D7";<br>
-                    document.getElementById("demo").style.color = "black";<br>
-                    document.getElementById("demo").style.fontSize = "15px";<br>
-                    document.getElementById("demo").innerHTML = "";<br>
-                }<br>
-            &lt;/script></b><br><br>
-
-            &lt;label id="demo">&lt;/label>&lt;br>&lt;br><br>
-            &lt;button onclick="mens()">Exibir mensagem&lt;/button><br>
-            &lt;button onclick="font()">Mudar Tamanho&lt;/button><br>
-            &lt;button onclick="color()">Mudar Cor&lt;/button><br>
-            &lt;button onclick="colorback()">Mudar Fundo&lt;/button><br>
-            &lt;button onclick="resetar()">Resetar&lt;/button>
-        </div>
+        <h3>22.2 - Sempre declarar o tipo de documento</h3>
+        <p>Sempre declare o tipo de documento como a primeira linha do seu documento.</p>
 
         <h4>Exemplo:</h4>
         <div class="explicacao-tag">
-            <script>
-                function mens(){
-                    document.getElementById("demo").innerHTML = "Hello JavaScript!";
-                }
-
-                function font(){
-                    document.getElementById("demo").style.fontSize = "25px";
-                }
-
-                function color(){
-                    document.getElementById("demo").style.color = "red";
-                }
-
-                function colorback(){
-                    document.getElementById("demo").style.backgroundColor = "yellow";
-                }
-
-                function resetar(){
-                    document.getElementById("demo").style.backgroundColor = "#DAD7D7";
-                    document.getElementById("demo").style.color = "black";
-                    document.getElementById("demo").style.fontSize = "15px";
-                    document.getElementById("demo").innerHTML = "";
-                }
-            </script>
-
-            <label id="demo"></label><br><br>
-            <button onclick="mens()">Exibir mensagem</button>
-            <button onclick="font()">Mudar Tamanho</button>
-            <button onclick="color()">Mudar Cor</button>
-            <button onclick="colorback()">Mudar Fundo</button>
-            <button onclick="resetar()">Resetar</button>
+            &lt;!DOCTYPE html>
         </div><br>
 
-        <h3>20.2 - Tag HTML &lt;noscript></h3>
-        <p>A tag HTML &lt;noscript> define um conteúdo alternativo a ser exibido aos usuários que possuem scripts desabilitados em seus navegadores ou possuem um navegador que não suporta scripts:</p>
+        <h3>22.3 - Use nomes de elementos em letras minúsculas</h3>
+        <p>HTML permite misturar letras maiúsculas e minúsculas nos nomes dos elementos. No entanto, recomendamos usar nomes de elementos em letras minúsculas porque:</p>
+        <ul>
+            <li>Misturar nomes maiúsculos e minúsculos parece ruim</li>
+            <li>Os desenvolvedores normalmente usam nomes em minúsculas</li>
+            <li>Letras minúsculas parecem mais limpas</li>  
+            <li>Letras minúsculas são mais fáceis de escrever</li>
+        </ul>
 
-        <h4>Código:</h4>
+        <h4>Bom:</h4>
         <div class="explicacao-tag">
-            &lt;script><br>
-                document.getElementById("demo2").innerHTML = "Hello JavaScript!";<br>
-            &lt;/script><br>
-            &lt;noscript>Desculpe, seu navegador não suporta JavaScript!&lt;/noscript>
+            &lt;p>Isso é um parágrafo&lt;/p>
+        </div><br>
+
+        <h4>Ruim:</h4>
+        <div class="explicacao-tag">
+            &lt;P>Isso é um parágrafo&lt;/P>
+        </div><br>
+
+        <h3>22.4 - Fechar todos os elementos HTML</h3>
+        <p>Em HTML, você não precisa fechar todos os elementos (por exemplo, o elemento &lt;p>). No entanto, recomendamos fortemente fechar todos os elementos HTML, assim:</p>
+
+        <h4>Bom:</h4>
+        <div class="explicacao-tag">
+            &lt;section>
+                &lt;p>Isso é um parágrafo&lt;/p>
+                &lt;p>Isso é um parágrafo&lt;/p>
+            &lt;/section>
+        </div><br>
+
+        <h4>Ruim:</h4>
+        <div class="explicacao-tag">
+            &lt;section>
+                &lt;p>Isso é um parágrafo
+                &lt;p>Isso é um parágrafo
+            &lt;/section>
+        </div><br>
+
+        <h3>22.5 - Use nomes de atributos em letras minúsculas</h3>
+        <p>HTML permite misturar letras maiúsculas e minúsculas em nomes de atributos. No entanto, recomendamos usar nomes de atributos em letras minúsculas porque:</p>
+        <ul>
+            <li>Misturar nomes maiúsculos e minúsculos parece ruim</li>
+            <li>Os desenvolvedores normalmente usam nomes em minúsculas</li>
+            <li>Letras minúsculas parecem mais limpas</li>
+            <li>Letras minúsculas são mais fáceis de escrever</li>
+        </ul>
+
+        <h4>Bom:</h4>
+        <div class="explicacao-tag">
+            &lt;a href="https://www.w3schools.com/html/">Visite o site W3 Schools&lt;/a>
+        </div><br>
+
+        <h4>Ruim:</h4>
+        <div class="explicacao-tag">
+            &lt;a HREF="https://www.w3schools.com/html/">Visite o site W3 Schools&lt;/a>
+        </div><br>
+
+        <h3>22.6 - Sempre citar valores de atributos</h3>
+        <p>HTML permite valores de atributos sem aspas. No entanto, recomendamos citar valores de atributos porque:</p>
+        <ul>
+            <li>Os desenvolvedores normalmente citam valores de atributos</li>
+            <li>Os valores citados são mais fáceis de ler</li>
+            <li>Letras minúsculas parecem mais limpas</li>
+            <li>Você DEVE usar aspas se o valor contiver espaços</li>
+        </ul>
+
+        <h4>Bom:</h4>
+        <div class="explicacao-tag">
+            &lt;table class="striped">
+        </div><br>
+
+        <h4>Ruim:</h4>
+        <div class="explicacao-tag">
+            &lt;table class=striped>
+        </div><br>
+
+        <h4>Muito Ruim:</h4>
+        <div class="explicacao-tag">
+            &lt;table class=table striped>
+        </div><br>
+
+        <h3>22.7 - Sempre especifique alt, largura e altura para imagens</h3>
+        <p>Sempre especifique o altatributo para imagens. Este atributo é importante se a imagem, por algum motivo, não puder ser exibida.</p>
+        <p>Além disso, sempre defina o widthe heightdas imagens. Isso reduz a oscilação, pois o navegador pode reservar espaço para a imagem antes de carregá-la.</p>
+
+        <h4>Bom:</h4>
+        <div class="explicacao-tag">
+            &lt;img src="html5.gif" alt="HTML5" style="width:128px;height:128px">
+        </div><br>
+
+        <h4>Ruim:</h4>
+        <div class="explicacao-tag">
+            &lt;img src="html5.gif">
+        </div><br>
+
+        <h3>22.8 - Espaços e sinais de igual</h3>
+        <p>HTML permite espaços em torno de sinais de igual. Mas sem espaço é mais fácil de ler e agrupa melhor as entidades.</p>
+
+        <h4>Bom:</h4>
+        <div class="explicacao-tag">
+            &lt;link rel="stylesheet" href="styles.css">
+        </div><br>
+
+        <h4>Ruim:</h4>
+        <div class="explicacao-tag">
+            &lt;link rel = "stylesheet" href = "styles.css">
+        </div><br>
+
+        <h3>22.9 - Evite longas linhas de código</h3>
+        <p>Ao usar um editor HTML, NÃO é conveniente rolar para a direita e para a esquerda para ler o código HTML. Tente evitar linhas de código muito longas.</p><br>
+
+        <h3>22.10 - Linhas em branco e recuo</h3>
+        <p>Não adicione linhas em branco, espaços ou recuos sem motivo. Para facilitar a leitura, adicione linhas em branco para separar blocos de código grandes ou lógicos. Para facilitar a leitura, adicione dois espaços de recuo ouu tab.</p>
+
+        <h4>Bom:</h4>
+        <div class="explicacao-tag">
+            &lt;h1>Famous Cities&lt;/h1><br><br>
+
+            &lt;h2>Tokyo&lt;/h2><br>
+            &lt;p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.&lt;/p><br><br>
+
+            &lt;h2>London&lt;/h2><br>
+            &lt;p>London is the capital city of England. It is the most populous city in the United Kingdom.&lt;/p><br><br>
+
+            &lt;h2>Paris&lt;/h2><br>
+            &lt;p>Paris is the capital of France. The Paris area is one of the largest population centers in Europe.&lt;/p>
+        </div><br>
+
+        <h4>Ruim:</h4>
+        <div class="explicacao-tag">
+            &lt;h1>Famous Cities&lt;/h1><br>
+            &lt;h2>Tokyo&lt;/h2>&lt;p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.&lt;/p><br>
+            &lt;h2>London&lt;/h2>&lt;p>London is the capital city of England. It is the most populous city in the United Kingdom.&lt;/p><br>
+            &lt;h2>Paris&lt;/h2>&lt;p>Paris is the capital of France. The Paris area is one of the largest population centers in Europe.&lt;/p>
+        </div><br>
+
+        <h4>Bom exemplo de tabela:</h4>
+        <div class="explicacao-tag">
+            &lt;table><br>
+                &nbsp;&nbsp;&lt;tr><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;th>Name&lt;/th><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;th>Description&lt;/th><br>
+                &nbsp;&nbsp;&lt;/tr><br>
+                &nbsp;&nbsp;&lt;tr><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;td>A&lt;/td><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;td>Description of A&lt;/td><br>
+                &nbsp;&nbsp;&lt;/tr><br>
+                &nbsp;&nbsp;&lt;tr><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;td>B&lt;/td><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;td>Description of B&lt;/td><br>
+                &nbsp;&nbsp;&lt;/tr><br>
+            &lt;/table>
+        </div><br>
+
+        <h4>Bom exemplo de lista:</h4>
+        <div class="explicacao-tag">
+            &lt;ul><br>
+                &nbsp;&nbsp;&lt;li>London&lt;/li><br>
+                &nbsp;&nbsp;&lt;li>Paris&lt;/li><br>
+                &nbsp;&nbsp;&lt;li>Tokyo&lt;/li><br>
+            &lt;/ul>
+        </div><br>
+
+        <h3>22.11 - Nunca pule o elemento &lt;title></h3>
+        <p>O conteúdo do título de uma página é muito importante para a otimização de mecanismos de pesquisa (SEO)! O título da página é usado pelos algoritmos do mecanismo de pesquisa para decidir a ordem ao listar as páginas nos resultados da pesquisa. Tente tornar o título o mais preciso e significativo possível.</p>
+
+        <h4>Sempre:</h4>
+        <div class="explicacao-tag">
+            &lt;title>HTML Style Guide and Coding Convention&lt;/title>
+        </div><br>
+
+        <h3>22.12 - Nunca omita &lt;html> e &lt;body></h3>
+        <p>Uma página HTML será validada sem as tags &lt;html> e &lt;body>. No entanto, é altamente recomendável sempre adiciona-las. A omissão &lt;body> pode produzir erros em navegadores mais antigos. Omitir &lt;html>e &lt;body> também pode travar o software DOM e XML.</p><br>
+
+        <h3>22.13 - Nunca omita &lt;head></h3>
+        <p>A tag HTML &lt;head> também pode ser omitida. Os navegadores adicionarão todos os elementos antes de &lt;body>, a um &lt;head> elemento padrão. No entanto, recomendamos usa-lo.</p><br>
+
+        <h3>22.14 - Deve-se fechar elementos HTML vazios?</h3>
+        <p>Em HTML, é opcional fechar elementos vazios. Se você espera que o software XML/XHTML acesse sua página, mantenha a barra de fechamento (/), pois ela é obrigatória em XML e XHTML.</p>
+
+        <h4>Permitido:</h4>
+        <div class="explicacao-tag">
+            &lt;meta charset="utf-8">
+        </div><br>
+
+        <h4>Permitido:</h4>
+        <div class="explicacao-tag">
+            &lt;meta charset="utf-8" />
+        </div><br>
+
+        <h3>22.15 - Adicione o atributo lang</h3>
+        <p>Você deve sempre incluir o langatributo dentro da &lt;html> tag, para declarar o idioma da página web. O objetivo é ajudar os mecanismos de pesquisa e navegadores.</p>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            &lt;!DOCTYPE html><br>
+            &lt;html lang="en-us"><br>
+            &lt;head><br>
+                &nbsp;&nbsp;&lt;title>Page Title&lt;/title><br>
+            &lt;/head><br>
+            &lt;body><br><br>
+
+                &nbsp;&nbsp;&lt;h1>This is a heading&lt;/h1><br>
+                &nbsp;&nbsp;&lt;p>This is a paragraph.&lt;/p><br><br>
+
+            &lt;/body><br>
+            &lt;/html>
+        </div><br>
+
+        <h3>22.16 - Metadados</h3>
+        <p>Para garantir a interpretação adequada e a indexação correta do mecanismo de pesquisa, tanto o idioma quanto a codificação de caracteres devem ser definidos o mais cedo possível em um documento HTML: &lt;meta charset="charset"></p>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            &lt;!DOCTYPE html><br>
+            &lt;html lang="en-us"><br>
+            &lt;head><br>
+                &nbsp;&nbsp;&lt;meta charset="UTF-8"><br>
+                &nbsp;&nbsp;&lt;title>Título&lt;/title><br>
+            &lt;/head>
+        </div><br>
+
+        <h3>22.17 - Configurando a janela de visualização</h3>
+        <p>A janela de visualização é a área visível do usuário em uma página da web. Varia de acordo com o dispositivo, será menor em um telefone celular do que na tela de um computador.</p>
+        <p>Você deve incluir o seguinte elemento &lt;meta> em todas as suas páginas da web:</p>
+
+        <div class="explicacao-tag">
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
         </div>
+
+        <p>Isso fornece instruções ao navegador sobre como controlar as dimensões e o dimensionamento da página.</p>
+        <p>A <b>width=device-widthparte</b> define a largura da página para seguir a largura da tela do dispositivo (que varia dependendo do dispositivo).</p>
+        <p>A <b>initial-scale=1.0parte</b> define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.</p><br>
+
+        <h3>22.18 - Comentários</h3>
+        <p>Comentários curtos devem ser escritos em uma linha, assim:</p>
+        <div class="explicacao-tag">
+            &lt;!-- Um comentário -->
+        </div>
+
+        <p>Comentários longos são mais fáceis de observar se forem recuados com dois espaços, devem ser escritos assim:</p>
+        <div class="explicacao-tag">
+            &lt;!--<br>
+                &nbsp;&nbsp;This is a long comment example. This is a long comment example.<br>
+                &nbsp;&nbsp;This is a long comment example. This is a long comment example.<br> 
+            -->
+        </div><br>
+
+        <h3>22.19 - Usando folhas de estilo</h3>
+        <p>Use sintaxe simples para vincular folhas de estilo (o typeatributo não é necessário):</p>
+        <div class="explicacao-tag">
+            &lt;link rel="stylesheet" href="styles.css">
+        </div><br>
+        
+        <p>Regras CSS curtas podem ser escritas compactadas, assim:</p>
+        <div class="explicacao-tag">
+            p.intro {font-family:Verdana;font-size:16em;}
+        </div><br>
+
+        <p>Regras CSS curtas podem ser escritas compactadas, assim:</p>
+        <div class="explicacao-tag">
+            body {<br>
+                &nbsp;&nbsp;background-color: lightgrey;<br>
+                &nbsp;&nbsp;font-family: "Arial Black", Helvetica, sans-serif;<br>
+                &nbsp;&nbsp;font-size: 16em;<br>
+                &nbsp;&nbsp;color: black;<br>
+            }
+        </div><br>
+
+        <h3>22.20 - Carregando JavaScript em HTML</h3>
+        <p>Use sintaxe simples para carregar scripts externos (o typeatributo não é necessário):</p>
+        <div class="explicacao-tag">
+            &lt;script src="myscript.js">
+        </div><br>
+
+        <h3>22.21 - Acessando elementos HTML com JavaScript</h3>
+        <p>Usar código HTML "desarrumado" pode resultar em erros de JavaScript. Estas duas instruções JavaScript produzirão resultados diferentes:</p>
+        <div class="explicacao-tag">
+            getElementById("Demo").innerHTML = "Hello";<br><br> 
+
+            getElementById("demo").innerHTML = "Hello";
+        </div><br>
+
+        <h3>22.22 - Use nomes de arquivos em letras minúsculas</h3>
+        <p>Alguns servidores web (Apache, Unix) diferenciam maiúsculas de minúsculas em relação aos nomes de arquivos: "london.jpg" não pode ser acessado como "London.jpg".</p>
+        <p>Outros servidores web (Microsoft, IIS) não diferenciam maiúsculas de minúsculas: "london.jpg" pode ser acessado como "London.jpg".</p>
+        <p>Se você usar uma mistura de letras maiúsculas e minúsculas, deve estar ciente disso.</p>
+        <p>Se você passar de um servidor que não diferencia maiúsculas de minúsculas para um que diferencia maiúsculas de minúsculas, mesmo pequenos erros danificarão sua web!</p>
+        <p>Para evitar esses problemas, use sempre nomes de arquivos em letras minúsculas!</p><br>
+
+        <h3>22.23 - Extensões de arquivo</h3>
+        <p>Os arquivos HTML devem ter uma extensão <b>.html</b> (<b>.htm</b> é permitido)</p>
+        <p>Os arquivos CSS devem ter uma extensão <b>.css</b></p>
+        <p>Os arquivos JavaScript devem ter uma extensão <b>.js</b></p><br>
+
+        <h3>22.24 - Diferenças entre .htm e .html</h3>
+        <p>Não há diferença entre as extensões de arquivo .htm e .html! Ambos serão tratados como HTML por qualquer navegador e servidor web.</p><br>
+
+        <h3>22.25 - Nomes de arquivos padrão</h3>
+        <p>Quando uma URL não especifica um nome de arquivo no final (como "https://www.w3schools.com/"), o servidor apenas adiciona um nome de arquivo padrão, como "index.html", "index.htm", " default.html" ou "default.htm".</p>
+        <p>Se o seu servidor estiver configurado apenas com "index.html" como nome de arquivo padrão, seu arquivo deverá ser denominado "index.html" e não "default.html".</p>
+        <p>Entretanto, os servidores podem ser configurados com mais de um nome de arquivo padrão; normalmente você pode configurar quantos nomes de arquivos padrão desejar.</p>
     </div><br>
 </body>
 </html>
