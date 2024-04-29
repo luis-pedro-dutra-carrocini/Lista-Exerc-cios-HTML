@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>HTML Entities</title>
 </head>
 <body>
-    
+    <h2 id="h2">23 - HTML Entities</h2>
+    <div class="explicacao-topico">
+        <h3>23.11 - Entidades de caracteres HTML</h3>
+        <p>Alguns caracteres são reservados em HTML. Se você usar os sinais de menor que (<) ou maior que (>) em seu texto HTML, o navegador poderá misturá-los com tags. Nomes ou números de entidades podem ser usados ​​para exibir caracteres HTML reservados.</p>
+        <p>Os nomes das entidades são assim:</p>
+        <div class="explicacao-tag">
+            <p>&entity_name;</p>
+        </div><br>
+
+        <p>Os números das entidades são assim:</p>
+        <div class="explicacao-tag">
+            <p>&#entity_name;</p>
+        </div><br>
+
+        <h3>23.2 - Espaço inquebrável</h3>
+        <p>Uma entidade HTML comumente usada é o espaço inseparável. Um espaço ininterrupto é um espaço que não será dividido em uma nova linha. Duas palavras separadas por um espaço inseparável ficarão juntas (não serão divididas em uma nova linha). Isso é útil quando quebrar as palavras pode ser perturbador.</p>
+        <p>Exemplos:</p>
+        <ul>
+            <li>§ 10</li>
+            <li>10 km/h</li>
+            <li>22h</li>
+        </ul>
+
+        <p>Outro uso comum do espaço ininterrupto é evitar que os navegadores trunquem espaços em páginas HTML.</p>
+        <p>Se você escrever 10 espaços no seu texto, o navegador removerá 9 deles. Para adicionar espaços reais ao seu texto, você pode usar o "&nbs" no final dele um "p;", se juntar os dois se tornará um &nbsp; espaço extra.</p>
+        <p>O hífen inseparável ( ‑ ) é usado para definir um caractere de hífen (‑) que não se divide em uma nova linha.</p>
+        
+    </div><br>
 </body>
 </html>
