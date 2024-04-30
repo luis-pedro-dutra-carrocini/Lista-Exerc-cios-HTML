@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Emojis</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/html.png">
 </head>
 <body>
-    
+    <h2 id="h2">25 - HTML Emojis</h2>
+    <div class="explicacao-topico">
+        <h3>25.1 - O que são emojis?</h3>
+        <p>Emojis parecem imagens ou ícones, mas não são. Na verdade são letras (caracteres) do conjunto de caracteres UTF-8 (Unicode). O UTF-8 cobre quase todos os caracteres e símbolos do mundo.</p>
+        <p>Para exibir uma página HTML corretamente, um navegador da Web deve conhecer o conjunto de caracteres usado na página.</p>
+        <p>Isso é especificado na tag &lt;meta>: &lt;meta charset="UTF-8"></p>
+
+        <h3>25.2 - Caracteres UTF-8</h3>
+        <p>Muitos caracteres UTF-8 não podem ser digitados em um teclado, mas sempre podem ser exibidos usando números (chamados de números de entidade):</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            <p>Exibiremos as letras: &amp;#65; &amp;#66; &amp;#67;</p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <p>Exibiremos as letras: &#65; &#66; &#67;</p>
+        </div>
+
+        <p>O elemento &lt;meta charset="UTF-8"> define o conjunto de caracteres. Os caracteres A, B e C são exibidos pelos números 65, 66 e 67.</p>
+        <p>Para que o navegador entenda que você está exibindo um caractere, você deve iniciar o número da entidade com & e terminar com ; (ponto e vírgula).</p><br>
+
+        <h3>25.3 - Personagens emojis</h3>
+        <p>Emojis também são caracteres do alfabeto UTF-8:</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;h1>Meus Emojis&lt;/h1><br>
+            &lt;p style="font-size:48px"><br>
+            &amp;#128512; &amp;#128516; &amp;#128525; &amp;#128151;<br>
+            &lt;/p>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <h1>Meus Emojis</h1>
+            <p style="font-size:48px">
+            &#128512; &#128516; &#128525; &#128151;
+            </p>
+        </div>
+    </div><br>
 </body>
 </html>

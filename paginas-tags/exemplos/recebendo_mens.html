@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Recebida</title>
+</head>
+<script>
+    var urlAtual = window.location.href;
+    var urlClass = new URL(urlAtual);
+    var mens = urlClass.searchParams.get("mens");
+</script>
+<body>
+    <p>Mensagem recebida: </p>
+</body>
+</html>

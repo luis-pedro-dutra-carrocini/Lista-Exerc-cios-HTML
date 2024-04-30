@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML URL Encode</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/html.png">
 </head>
 <body>
-    
+    <h2 id="h2">27 - HTML URL Encode</h2>
+    <div class="explicacao-topico">
+        <h3>27.1 - Localizadores uniformes de recursos HTML</h3>
+        <p>URL é outra palavra para endereço da web. Uma URL pode ser composta por palavras (por exemplo, w3schools.com) ou por um endereço de protocolo de Internet (IP) (por exemplo, 192.68.20.50). A maioria das pessoas insere o nome quando navega, porque os nomes são mais fáceis de lembrar do que os números</p>
+
+        <h3>27.2 - URL - Localizador Uniforme de Recursos</h3>
+        <p>Os navegadores da Web solicitam páginas de servidores da Web usando um URL. Um Uniform Resource Locator (URL) é usado para endereçar um documento (ou outros dados) na web.</p>
+        <p>Um endereço da web como https://www.w3schools.com/html/default.asp segue estas regras de sintaxe: esquema://prefixo.dominio:porta/caminho/nomedoarquivo</p>
+        <p>Explicação:</p>
+        <ul>
+            <li>esquema - define o tipo de serviço de Internet (o mais comum é http ou https)</li>
+            <li>prefixo - define um prefixo de domínio (o padrão para http é www )</li>
+            <li>domínio - define o nome de domínio da Internet (como w3schools.com)</li>
+            <li>porta - define o número da porta no host (o padrão para http é 80)</li>
+            <li>path - define um caminho no servidor (se omitido: o diretório raiz do site)</li>
+            <li>nome do arquivo - define o nome de um documento ou recurso</li>
+        </ul><br>
+
+        <h3>27.3 - Codificação de URL</h3>
+        <p>URLs só podem ser enviados pela Internet usando o conjunto de caracteres ASCII . Se um URL contiver caracteres fora do conjunto ASCII, o URL deverá ser convertido.</p>
+        <p>A codificação de URL converte caracteres não ASCII em um formato que pode ser transmitido pela Internet. Substituindo caracteres não ASCII por "%" seguido de dígitos hexadecimais. URLs também não podem conter espaços, então a codificação de URL normalmente substitui um espaço por um sinal de mais (+) ou% 20.</p>
+
+        <h4>Tente você mesmo:</h4>
+        <div class="explicacao-tag">
+            <input type="text" value="Olá pessoal!" id="mens">
+            <button onclick="enviar_mens()">Enviar</button>
+        </div><br>
+
+        <script>
+            function enviar_mens(){
+                let mens = document.getElementById('mens').value
+                window.open('./exemplos/recebendo_mens.html?mens='+mens, '_blank')
+            }
+        </script>
+
+        <h3>26.4 - O conjunto de caracteres ISO-8859-1</h3>
+        <p>ISO-8859-1 era o conjunto de caracteres padrão para HTML 4. Este conjunto de caracteres suportava 256 códigos de caracteres diferentes. HTML 4 também suporta UTF-8.</p>
+        <ul>
+            <li>Idêntico ao ASCII para os primeiros 127 caracteres</li>
+            <li>Não usa os caracteres de 128 a 159</li>
+            <li>Idêntico a ANSI e UTF-8 de 160 a 255</li>
+        </ul><br>
+
+        <h4>HTML4:</h4>
+        <div class="explicacao-tag">
+            &lt;meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+        </div>
+
+        <h4>HTML5:</h4>
+        <div class="explicacao-tag">
+            &lt;meta charset="ISO-8859-1">
+        </div><br>
+
+        <h3>26.5 - O conjunto de caracteres UTF-8</h3>
+        <ul>
+            <li>É idêntico ao ASCII para os valores de 0 a 127</li>
+            <li>Não usa os caracteres de 128 a 159</li>
+            <li>Idêntico ao ANSI e 8859-1 de 160 a 255</li>
+            <li>Contínua do valor 256 até 10.000 caracteres</li>
+        </ul><br>
+
+        <div class="explicacao-tag">
+            &lt;meta charset="UTF-8">
+        </div><br>
+
+    </div><br>
 </body>
 </html>

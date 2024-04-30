@@ -21,19 +21,151 @@
             <p>&#entity_name;</p>
         </div><br>
 
-        <h3>23.2 - Espaço inquebrável</h3>
-        <p>Uma entidade HTML comumente usada é o espaço inseparável. Um espaço ininterrupto é um espaço que não será dividido em uma nova linha. Duas palavras separadas por um espaço inseparável ficarão juntas (não serão divididas em uma nova linha). Isso é útil quando quebrar as palavras pode ser perturbador.</p>
-        <p>Exemplos:</p>
-        <ul>
-            <li>§ 10</li>
-            <li>10 km/h</li>
-            <li>22h</li>
-        </ul>
+        <h3>23.2 - Algumas entidades úteis de caracteres HTML:</h3>
+        <table>
+            <tr>
+            <th>Resultado</th>
+            <th>Descrição</th>
+            <th>Nome</th>
+            <th>Número</th>    
+            </tr>
+            <tr>
+            <td></td>
+            <td>Espaço inquebrável</td>
+            <td>&amp;nbsp;</td>
+            <td>&amp;#160;</td>  
+            </tr>
+            <tr>
+            <td>&lt;</td>
+            <td>Menor que</td>
+            <td>&amp;lt;</td>
+            <td>&amp;#60;</td>
+            </tr>
+            <tr>
+            <td>&gt;</td>
+            <td>Maior que</td>
+            <td>&amp;gt;</td>
+            <td>&amp;#62;</td>
+            </tr>
+            <tr>
+            <td>&amp;</td>
+            <td>E comercial</td>
+            <td>&amp;amp;</td>
+            <td>&amp;#38;</td>
+            </tr>
+            <tr>
+            <td>&quot;</td>
+            <td>Aspas Duplas</td>
+            <td>&amp;quot;</td>
+            <td>&amp;#34;</td>
+            </tr>
+            <tr>
+            <td>&apos;</td>
+            <td>Aspas Simples</td>
+            <td>&amp;apos;</td>
+            <td>&amp;#39;</td>
+            </tr>
+            <tr>
+            <td>&cent;</td>
+            <td>Centávo</td>
+            <td>&amp;cent;</td>
+            <td>&amp;#162;</td>
+            </tr>
+            <tr>
+            <td>&pound;</td>
+            <td>Libra</td>
+            <td>&amp;pound;</td>
+            <td>&amp;#163;</td>
+            </tr>
+            <tr>
+            <td>&yen;</td>
+            <td>Iene</td>
+            <td>&amp;yen;</td>
+            <td>&amp;#165;</td>
+            </tr>
+            <tr>
+            <td>&euro;</td>
+            <td>Euro</td>
+            <td>&amp;euro;</td>
+            <td>&amp;#8364;</td>
+            </tr>
+            <tr>
+            <td>&copy;</td>
+            <td>Direito Autoral</td>
+            <td>&amp;copy;</td>
+            <td>&amp;#169;</td>
+            </tr>
+            <tr>
+            <td>&#174;</td>
+            <td>trademark</td>
+            <td>&amp;reg;</td>
+            <td>&amp;#174;</td>
+            </tr>
+        </table><br>
 
-        <p>Outro uso comum do espaço ininterrupto é evitar que os navegadores trunquem espaços em páginas HTML.</p>
-        <p>Se você escrever 10 espaços no seu texto, o navegador removerá 9 deles. Para adicionar espaços reais ao seu texto, você pode usar o "&nbs" no final dele um "p;", se juntar os dois se tornará um &nbsp; espaço extra.</p>
-        <p>O hífen inseparável ( ‑ ) é usado para definir um caractere de hífen (‑) que não se divide em uma nova linha.</p>
-        
+        <h3>23.3 - Combinando marcas diacríticas</h3> 
+        <p>Uma marca diacrítica é um “glifo” adicionado a uma letra.</p>
+        <p>Algumas marcas diacríticas, como grave (̀) e aguda (́) são chamadas de acentos.</p>
+        <p>Marcas diacríticas podem ser usadas em combinação com caracteres alfanuméricos para produzir um caractere que não esteja presente no conjunto de caracteres (codificação) usado na página.</p>
+        <p>Aqui estão alguns exemplos:</p>
+
+        <table>
+            <tr>
+                <th>Símbolo</th>
+                <th>Caracter</th>
+                <th>Construção</th>
+                <th>Resultado</th>    
+            </tr>
+            <tr>
+                  <td>&nbsp;&#768;</td>
+                  <td>a</td>
+                  <td>a&amp;#768;</td>
+                  <td>a&#768;</td>
+            </tr>
+            <tr>
+                  <td>&nbsp;&#769;</td>
+                  <td>a</td>
+                  <td>a&amp;#769;</td>
+                  <td>a&#769;</td>
+            </tr>
+            <tr>
+                  <td>&#770;</td>
+                  <td>a</td>
+                  <td>a&amp;#770;</td>
+                  <td>a&#770;</td>
+            </tr>
+            <tr>
+                  <td>&nbsp;&#771;</td>
+                  <td>a</td>
+                  <td>a&amp;#771;</td>
+                  <td>a&#771;</td>
+            </tr>
+            <tr>
+                  <td>&nbsp;&#768;</td>
+                  <td>O</td>
+                  <td>O&amp;#768;</td>
+                  <td>O&#768;</td>
+            </tr>
+            <tr>
+                  <td>&nbsp;&#769;</td>
+                  <td>O</td>
+                  <td>O&amp;#769;</td>
+                  <td>O&#769;</td>
+            </tr>
+            <tr>
+                  <td>&#770;</td>
+                  <td>O</td>
+                  <td>O&amp;#770;</td>
+                  <td>O&#770;</td>
+            </tr>
+            <tr>
+                  <td>&nbsp;&#771;</td>
+                  <td>O</td>
+                  <td>O&amp;#771;</td>
+                  <td>O&#771;</td>
+            </tr>
+            </table>
+            
     </div><br>
 </body>
 </html>
