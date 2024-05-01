@@ -3,9 +3,594 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Input Types</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/html.png">
 </head>
 <body>
+    <h2 id="h2">32 - HTML Input Types</h2>
+    <div class="explicacao-topico">
+        <h3>32.1 - Tipos de entrada HTML</h3>
+        <p>Este capítulo descreve os diferentes tipos de elemento HTML &lt;input>. Aqui estão os diferentes tipos de entrada que você pode usar em HTML:</p>
+        <ul>
+            <li>&lt;input type="button"></li>
+            <li>&lt;input type="checkbox"></li>
+            <li>&lt;input type="color"></li>
+            <li>&lt;input type="date"></li>
+            <li>&lt;input type="datetime-local"></li>
+            <li>&lt;input type="email"></li>
+            <li>&lt;input type="file"></li>
+            <li>&lt;input type="hidden"></li>
+            <li>&lt;input type="image"></li>
+            <li>&lt;input type="month"></li>
+            <li>&lt;input type="number"></li>
+            <li>&lt;input type="password"></li>
+            <li>&lt;input type="radio"></li>
+            <li>&lt;input type="range"></li>
+            <li>&lt;input type="reset"></li>
+            <li>&lt;input type="search"></li>
+            <li>&lt;input type="submit"></li>
+            <li>&lt;input type="tel"></li>
+            <li>&lt;input type="text"></li>
+            <li>&lt;input type="time"></li>
+            <li>&lt;input type="url"></li>
+            <li>&lt;input type="week"></li>
+        </ul><br>
+
+        <h3>32.2 - Tipo Texto</h3>
+        <p>&lt;input type="text"> define um campo de entrada de texto de linha única:</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="fname">Nome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="text" id="fname" name="fname">&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="lname">Sobrenome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="text" id="lname" name="lname"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="fname">Nome:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Sobrenome:</label><br>
+                <input type="text" id="lname" name="lname">
+            </form>
+        </div><br>
+
+        <h3>32.3 - Tipo Senha </h3>
+        <p>&lt;input type="password"> define um campo de senha, os caracteres são mascarados (mostrados como asteriscos ou círculos).:</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="username">Usuário:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="text" id="username" name="username">&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="pwd">Senha:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="password" id="pwd" name="pwd"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="username">Usuário:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="pwd">Senha:</label><br>
+                <input type="password" id="pwd" name="pwd">
+            </form>
+        </div><br>
     
+        <h3>32.4 - Tipo Submit</h3>
+        <p>&lt;input type="submit" >define um botão para enviar dados do formulário para um manipulador de formulários.</p>
+        <p>O manipulador de formulário normalmente é uma página de servidor com um script para processar dados de entrada, é especificado no action atributo do formulário:</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form action=""exemplos/actions.html"><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="fname">Nome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="text" id="fname" name="fname" value="John">&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="lname">Sobrenome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="text" id="lname" name="lname" value="Doe">&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Enviar"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form action="exemplos/actions.html">
+                <label for="fname">Nome:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Sobrenome:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div><br>
+
+        <h3>32.5 - Tipo Reset</h3>
+        <p>&lt;input type="reset"> define um botão de redefinição que redefinirá todos os valores do formulário para seus valores padrão. Se você alterar os valores de entrada e clicar no botão "Redefinir", os dados do formulário serão redefinidos para os valores padrão.</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form action="exemplos/actions.html"><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="fname">Nome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="text" id="fname" name="fname" value="John">&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="lname">Sobrenome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="text" id="lname" name="lname" value="Doe">&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Enviar"><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="reset" value="Restaurar"><br>
+            &lt;/form>             
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form action="exemplos/actions.html">
+                <label for="fname">Nome:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Sobrenome:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restaurar">
+            </form>               
+        </div><br>
+
+        <h3>32.6 - Tipo Radio</h3>
+        <p>&lt;input type="radio"> define um botão de opção. Eles permitem que um usuário selecione APENAS UMA dentre um número limitado de opções:</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;p>Escolha sua linguagem da WEB favorita:&lt;/p><br>
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="radio" id="html" name="fav_language" value="HTML"><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="html">HTML&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="radio" id="css" name="fav_language" value="CSS"><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="css">CSS&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="radio" id="javascript" name="fav_language" value="JavaScript"><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="javascript">JavaScript&lt;/label><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <p>Escolha sua linguagem da WEB favorita:</p>
+            <form>
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+            </form>
+        </div><br>
+
+        <h3>32.7 - Tipo Select</h3>
+        <p>&lt;input type="checkbox"> define uma caixa de seleção. As caixas de seleção permitem que um usuário selecione ZERO ou MAIS opções de um número limitado de opções.</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">                    
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="vehicle1"> Eu gosto  de bike&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="vehicle2" name="vehicle2" value="Car"><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="vehicle2"> Eu gosto de carro&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="vehicle3"> Eu gosto de barco&lt;/label><br>
+            &lt;/form>       
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> Eu gosto  de bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> Eu gosto de carro</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> Eu gosto de barco</label>
+            </form>                        
+        </div><br>
+
+        <h3>32.8 - Tipo Button</h3>
+        <p>&lt;input type="button"> define um botão :</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;input type="button" onclick="alert('Olá mundo!')" value="Clique em mim!">                 
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <input type="button" onclick="alert('Olá mundo!')" value="Clique em mim!">                            
+        </div><br>
+
+        <h3>32.9 - Tipo Color</h3>
+        <p>O &lt;input type="color"> é usado para campos de entrada que devem conter uma cor.</p>
+        <p>Dependendo do suporte do navegador, um seletor de cores pode aparecer no campo de entrada.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="favcolor">Selecione sua cor favorita:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="color" id="favcolor" name="favcolor"><br>
+            &lt;/form>    
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="favcolor">Selecione sua cor favorita:</label>
+                <input type="color" id="favcolor" name="favcolor">
+            </form>          
+        </div><br>
+
+        <h3>32.10 - Tipo Date</h3>
+        <p>O &lt;input type="date"> é usado para campos de entrada que devem conter uma data.</p>
+        <p>Dependendo do suporte do navegador, um seletor de data pode aparecer no campo de entrada.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="birthday">Data:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="date" id="birthday" name="birthday"><br>
+            &lt;/form>   
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="birthday">Data:</label>
+                <input type="date" id="birthday" name="birthday">
+            </form>           
+        </div><br>
+
+        <h3>32.11 - Tipo Date</h3>
+        <p>O &lt;input type="date"> é usado para campos de entrada que devem conter uma data.</p>
+        <p>Dependendo do suporte do navegador, um seletor de data pode aparecer no campo de entrada.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="birthday">Seu anivesário:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="date" id="birthday" name="birthday"><br>
+            &lt;/form>   
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="birthday">Seu anivesário:</label>
+                <input type="date" id="birthday" name="birthday">
+            </form>           
+        </div><br>
+
+        <p>Você também pode usar os atributos mine maxpara adicionar restrições às datas:</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="datemax">Isira a data antes de 01/01/1980:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="date" id="datemax" name="datemax" max="1979-12-31">&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="datemin">Isira a data depois de 01/01/2000:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="date" id="datemin" name="datemin" min="2000-01-02"><br>
+            &lt;/form>     
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="datemax">Isira a data antes de 01/01/1980:</label>
+                <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+                <label for="datemin">Isira a data depois de 01/01/2000:</label>
+                <input type="date" id="datemin" name="datemin" min="2000-01-02">
+            </form>         
+        </div><br>
+
+        <h3>32.12 - Tipo Datetime-local</h3>
+        <p>Especifica &lt;input type="datetime-local"> um campo de entrada de data e hora, sem fuso horário.</p>
+        <p>Dependendo do suporte do navegador, um seletor de data pode aparecer no campo de entrada.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="birthdaytime">Seua aniversário (data e hora):&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+            &lt;/form>  
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="birthdaytime">Seua aniversário (data e hora):</label>
+                <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+            </form>          
+        </div><br>
+
+        <h3>32.13 - Tipo Email</h3>
+        <p>O &lt;input type="email"> é usado para campos de entrada que devem conter um endereço de e-mail.</p>
+        <p>Dependendo do suporte do navegador, o endereço de e-mail pode ser validado automaticamente quando enviado.</p>
+        <p>Alguns smartphones reconhecem o tipo de e-mail e adicionam “.com” ao teclado para corresponder à entrada do e-mail.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="email">Seu email:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="email" id="email" name="email"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="email">Seu email:</label>
+                <input type="email" id="email" name="email">
+            </form>         
+        </div><br>
+
+        <h3>32.14 - Tipo Image</h3>
+        <p>O &lt;input type="image"> define uma imagem como um botão de envio. O caminho para a imagem é especificado no atributo src.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="image" src="img/html.gif" alt="Submit" width="48" height="48"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <input type="image" src="img/html.gif" alt="Submit" width="100" height="70">
+            </form>      
+        </div><br>
+
+        <h3>32.15 - Tipo File</h3>
+        <p>O &lt;input type="file"> define um campo de seleção de arquivo e um botão "Navegar" para uploads de arquivos.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="myfile">selecione um arquivo:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="file" id="myfile" name="myfile"><br>
+            &lt;/form>   
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="myfile">Selecione um arquivo:</label>
+                <input type="file" id="myfile" name="myfile">
+            </form>     
+        </div><br>
+
+        <h3>32.16 - Tipo Hidden</h3>
+        <p>Define &lt;input type="hidden"> um campo de entrada oculto (não visível para o usuário).</p>
+        <p>Um campo oculto permite que os desenvolvedores web incluam dados que não podem ser vistos ou modificados pelos usuários quando um formulário é enviado. Geralmente armazena qual registro do banco de dados precisa ser atualizado quando o formulário é enviado.</p>
+        <p>Embora o valor não seja exibido ao usuário no conteúdo da página, ele fica visível (e pode ser editado) usando as ferramentas de desenvolvedor de qualquer navegador ou a funcionalidade "Visualizar código-fonte". <b>Não use entradas ocultas como forma de segurança!</b></p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="fname">Nome:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="text" id="fname" name="fname">&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="hidden" id="custId" name="custId" value="3487"><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"><br>
+            &lt;/form>   
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="fname">Nome:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <input type="hidden" id="custId" name="custId" value="3487">
+                <input type="submit" value="Submit">
+            </form>    
+        </div><br>
+
+        <h3>32.17 - Tipo Month</h3>
+        <p>O &lt;input type="month"> permite ao usuário selecionar um mês e ano.</p>
+        <p>Dependendo do suporte do navegador, um seletor de data pode aparecer no campo de entrada.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="bdaymonth">Seu aniversário (Mês e Ano):&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="month" id="bdaymonth" name="bdaymonth"><br>
+            &lt;/form>     
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="bdaymonth">Seu aniversário (Mês e Ano):</label>
+                <input type="month" id="bdaymonth" name="bdaymonth">
+            </form>    
+        </div><br>
+
+        <h3>32.18 - Tipo Number</h3>
+        <p>O &lt;input type="number"> define um campo de entrada numérico .</p>
+        <p>Você também pode definir restrições sobre quais números são aceitos. O exemplo a seguir exibe um campo de entrada numérico, onde você pode inserir um valor de 1 a 5:</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="quantity">Quantidade (de 1 a 5):&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="number" id="quantity" name="quantity" min="1" max="5"><br>
+            &lt;/form>    
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="quantity">Quantidade (de 1 a 5):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="5">
+            </form>   
+        </div><br>
+        
+        <h3>32.19 - Restrições de entrada</h3>
+        <p>Aqui está uma lista de algumas restrições de entrada comuns:</p>
+        <table>
+        <tr>
+        <th style="width:20%">Atributo</th>
+        <th>Descrição</th>
+        </tr>
+        <tr>
+        <td>checked</td>
+        <td>Especifica que um campo de entrada deve ser pré-selecionado quando a página for carregada (para type=&quot;checkbox&quot; ou type=&quot;radio&quot;)</td>
+        </tr>
+        <tr>
+        <td>disabled</td>
+        <td>Especifica que um campo de entrada deve ser desabilitado</td>
+        </tr>
+        <tr>
+        <td>max</td>
+        <td>Especifica o valor máximo para um campo de entrada</td>
+        </tr>
+        <tr>
+        <td>maxlength</td>
+        <td>Especifica o número máximo de caracteres para um campo de entrada</td>
+        </tr>
+        <tr>
+        <td>min</td>
+        <td>Especifica o valor mínimo para um campo de entrada</td>
+        </tr>
+        <tr>
+        <td>pattern</td>
+        <td>Especifica uma expressão regular para verificar o valor de entrada</td>
+        </tr>
+        <tr>
+        <td>readonly</td>
+        <td>Especifica que um campo de entrada é somente leitura (não pode ser alterado)</td>
+        </tr>
+        <tr>
+        <td>required</td>
+        <td>Especifica que um campo de entrada é obrigatório (deve ser preenchido)</td>
+        </tr>
+        <tr>
+        <td>size</td>
+        <td>Especifica a largura (em caracteres) de um campo de entrada</td>
+        </tr>
+        <tr>
+        <td>step</td>
+        <td>Especifica os intervalos numéricos legais para um campo de entrada</td>
+        </tr>
+        <tr>
+        <td>value</td>
+        <td>Especifica o valor padrão para um campo de entrada</td>
+        </tr>
+    </table><br>
+
+        <h3>32.20 - Tipo Range</h3>
+        <p>&lt;input type="range"> define um controle para inserir um número cujo valor exato não é importante (como um controle deslizante). O intervalo padrão é de 0 a 100. No entanto, você pode definir restrições sobre quais números são aceitos com os atributos min, max e step:</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="vol">Volume (de 0 a 50):&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="range" id="vol" name="vol" min="0" max="50"><br>
+            &lt;/form>   
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="vol">Volume (de 0 a 50):</label>
+                <input type="range" id="vol" name="vol" min="0" max="50">
+            </form> 
+        </div><br>
+
+        <h3>32.21 - Tipo Search</h3>
+        <p>O &lt;input type="search"> é usado para campos de pesquisa (um campo de pesquisa se comporta como um campo de texto normal).</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="gsearch">Pesquisar no Google:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="search" id="gsearch" name="gsearch"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="gsearch">Pesquisar no Google:</label>
+                <input type="search" id="gsearch" name="gsearch">
+            </form>
+        </div><br>
+
+        <h3>32.22 - Tipo Tel</h3>
+        <p>O &lt;input type="tel"> é usado para campos de entrada que devem conter um número de telefone.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form>br<br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="phone">Insira seu telefone:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="phone">Insira seu telefone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+            </form>
+        </div><br>
+
+        <h3>32.23 - Tipo Time</h3>
+        <p>Permite &lt;input type="time"> ao usuário selecionar um horário (sem fuso horário).</p>
+        <p>Dependendo do suporte do navegador, um seletor de horário pode aparecer no campo de entrada.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="appt">Selecione a hora:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="time" id="appt" name="appt"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="appt">Selecione a hora:</label>
+                <input type="time" id="appt" name="appt">
+            </form>
+        </div><br>
+
+        <h3>32.24 - Tipo Url</h3>
+        <p>O &lt;input type="url"> é usado para campos de entrada que devem conter um endereço URL.</p>
+        <p>Dependendo do suporte do navegador, o campo url pode ser validado automaticamente quando enviado. Alguns smartphones reconhecem o tipo de URL e adicionam “.com” ao teclado para corresponder à entrada do URL.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &nbsp;&nbsp;&nbsp;&lt;label for="homepage">Adicione sua página:&lt;/label><br>
+                &nbsp;&nbsp;&nbsp;&lt;input type="url" id="homepage" name="homepage"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="homepage">Adicione sua página:</label>
+                <input type="url" id="homepage" name="homepage">
+            </form>
+        </div><br>
+
+        <h3>32.25 - Tipo Week</h3>
+        <p>O &lt;;input type="week"> permite ao usuário selecionar uma semana e um ano.</p>
+        <p>Dependendo do suporte do navegador, um seletor de data pode aparecer no campo de entrada.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form><br>
+                &lt;label for="week">Selecione a semana:&lt;/label><br>
+                &lt;input type="week" id="week" name="week"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form>
+                <label for="week">Selecione a semana:</label>
+                <input type="week" id="week" name="week">
+            </form>
+        </div><br>
+    </div><br>
 </body>
 </html>
