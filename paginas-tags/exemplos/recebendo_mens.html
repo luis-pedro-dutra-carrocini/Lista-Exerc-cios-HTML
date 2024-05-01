@@ -6,11 +6,15 @@
     <title>Mensagem Recebida</title>
 </head>
 <script>
-    var urlAtual = window.location.href;
-    var urlClass = new URL(urlAtual);
-    var mens = urlClass.searchParams.get("mens");
+    function exibir_mensagem(){
+        var urlAtual = window.location.href;
+        var urlClass = new URL(urlAtual);
+        var mens = urlClass.searchParams.get("mens");
+
+        document.getElementById("mensagem").innerHTML = "Mensagem recebida: " + mens;
+    }
 </script>
-<body>
-    <p>Mensagem recebida: </p>
+<body onload="exibir_mensagem()">
+    <p id="mensagem"></p>
 </body>
 </html>

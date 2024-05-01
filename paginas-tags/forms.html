@@ -3,9 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/html.png">
 </head>
 <body>
-    
+    <h2 id="h2">29 - HTML Forms</h2>
+    <div class="explicacao-topico">
+        <h3>29.1 - O que é XHTML?</h3>
+        <p>O elemento HTML <form>pode conter um ou mais dos seguintes elementos de formulário:</p>
+            <ul>
+                <li>&lt;input></li>
+                <li>&lt;label></li>
+                <li>&lt;select></li>
+                <li>&lt;textarea></li>
+                <li>&lt;button></li>
+                <li>&lt;fieldset></li>
+                <li>&lt;legend></li>
+                <li>&lt;datalist></li>
+                <li>&lt;output></li>
+                <li>&lt;option></li>
+                <li>&lt;optgroup></li>
+            </ul><br>
+
+        <h3>29.2 - O elemento &lt;input></h3>
+        <p>Um dos elementos de formulário mais utilizados é o elemento  &lt;input>. Ele pode ser exibido de diversas maneiras, dependendo do type atributo.</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;label for="fname">First name:&lt;/label><br>
+            &lt;input type="text" id="fname" name="fname">
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname">
+        </div><br>
+
+        <h3>29.3 - O elemento <label></h3>
+        <p>O elemento &lt;label> define um rótulo para vários elementos do formulário. Ele é útil para usuários de leitores de tela, porque o leitor de tela lerá o rótulo em voz alta quando o usuário focar no elemento de entrada.</p>
+        <p>Também ajuda usuários que têm dificuldade em clicar em regiões muito pequenas (como botões de opção ou caixas de seleção) - porque quando o usuário clica no texto dentro do elemento &lt;label>, ele alterna o botão de opção/caixa de seleção. O atributo for da tag &lt;label> deve ser igual ao do elemento &lt;input> para uni-los.</p>
+
+        <h3>29.4 - O elemento &lt;select></h3>
+        <p>O elemento &lt;select> define uma lista suspensa:</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;label for="cars">Escolha um carro:&lt;/label><br>
+            &lt;select id="cars" name="cars"><br>
+            &nbsp;&nbsp;&nbsp;&lt;option value="volvo">Volvo&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&lt;option value="saab">Saab&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&lt;option value="fiat">Fiat&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&lt;option value="audi">Audi&lt;/option><br>
+            &lt;/select>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <label for="cars">Escolha um carro:</label>
+            <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            </select>
+        </div><br>
+
+        <p>O elemento &lt;option> define uma opção que pode ser selecionada. Por padrão, o primeiro item da lista suspensa é selecionado. Para definir uma opção pré-selecionada, adicione o atributo selected à opção:</p>
+        <div class="explicacao-tag">
+            &lt;option value="fiat" selected>Fiat</option>
+        </div><br>
+
+        <p>Use o sizeatributo para especificar o número de valores visíveis:</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;label for="cars">Esconlha um carro:</label><br>
+            &lt;select id="cars" name="cars" size="3"><br>
+            &nbsp;&nbsp;&nbsp;&lt;option value="volvo">Volvo&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&lt;option value="saab">Saab&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&lt;option value="fiat">Fiat&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&lt;option value="audi">Audi&lt;/option><br>
+            &lt;/select>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <label for="cars">Esconlha um carro:</label>
+            <select id="cars" name="cars" size="3">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            </select>
+        </div><br>
+
+        <p>Use o multipleatributo para permitir que o usuário selecione mais de um valor:</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;label for="cars">Esconlha um carro:&lt;/label><br>
+            &lt;select id="cars" name="cars" size="4" multiple><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="volvo">Volvo&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="saab">Saab&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="fiat">Fiat&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="audi">Audi&lt;/option><br>
+            &lt;/select>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <label for="cars">Esconlha um carro:</label>
+            <select id="cars" name="cars" size="4" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            </select>
+        </div><br>
+
+        <h3>29.5 - O elemento &lt;textarea></h3>
+        <p>O elemento &lt;textarea> define um campo de entrada multilinha (uma área de texto).</p>
+        <p>O atributo rows especifica o número visível de linhas em uma área de texto. O atributo cols especifica a largura visível de uma área de texto.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;textarea name="message" rows="10" cols="30"><br>
+                The cat was playing in the garden.<br>
+            &lt;/textarea>                
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <textarea name="message" rows="10" cols="30">The cat was playing in the garden.
+            </textarea>                
+        </div><br>
+
+        <p>Você também pode definir o tamanho da área de texto usando CSS</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;textarea name="message" style="width:200px; height:600px;"><br>
+                The cat was playing in the garden.<br>
+            &lt;/textarea>                              
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <textarea name="message" style="width:200px; height:600px;">The cat was playing in the garden.
+            </textarea>                               
+        </div><br>
+
+        <h3>29.6 - O elemento &lt;button></h3>
+        <p>O elemento &lt;button> define um botão clicável.  Sempre especifique o typeatributo para o elemento botão. Diferentes navegadores podem usar diferentes tipos padrão para o elemento de botão.</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;button type="button" onclick="alert('Hello World!')">Click Me!</button>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+        </div><br>
+
+        <h3>29.7 - Os elementos &lt;fieldset> e &lt;legend></h3>
+        <p>O elemento &lt;fieldset> é usado para agrupar dados relacionados em um formulário. O elemento &lt;legend> define uma legenda para o elemento &lt;fieldset>.</p>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form action="exemplos/actions.html"><br>
+                &nbsp;&nbsp;&lt;fieldset><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend>Personalia:&lt;/legend><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="fname">First name:&lt;/label>&lt;br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="fname" name="fname" value="John">&lt;br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="lname">Last name:&lt;/label>&lt;br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="lname" name="lname" value="Doe">&lt;br>&lt;br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"><br>
+                &nbsp;&nbsp;&lt;/fieldset><br>
+            &lt;/form>                             
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form action="exemplos/actions.html"><br>
+                <fieldset><br>
+                  <legend>Personalia:</legend><br>
+                  <label for="fname">First name:</label><br><br>
+                  <input type="text" id="fname" name="fname" value="John"><br><br>
+                  <label for="lname">Last name:</label><br><br>
+                  <input type="text" id="lname" name="lname" value="Doe"><br><br><br>
+                  <input type="submit" value="Submit"><br>
+                </fieldset><br>
+            </form>                             
+        </div><br>
+
+        <h3>29.8 - O elemento &lt;datalist></h3>
+        <p>O elemento &lt;datalist> especifica uma lista de opções predefinidas para um elemento &lt;input>.</p>
+        <p>Os usuários verão uma lista suspensa de opções predefinidas à medida que inserem os dados.</p>
+        <p>O atributo list do elemento &lt;input> deve referir-se ao do elemento &lt;datalist>.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form action="exemplos/actions.html"><br>
+                &nbsp;&nbsp;&lt;input list="browsers"><br>
+                &nbsp;&nbsp;&lt;datalist id="browsers"><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Edge"><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Firefox"><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Chrome"><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Opera"><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Safari"><br>
+                &nbsp;&nbsp;&lt;/datalist>
+            &lt;/form>                    
+        </div>
+
+        <h4>Errado:</h4>
+        <div class="explicacao-tag">
+            <form action="exemplos/actions.html">
+                <input list="browsers">
+                <datalist id="browsers">
+                  <option value="Edge">
+                  <option value="Firefox">
+                  <option value="Chrome">
+                  <option value="Opera">
+                  <option value="Safari">
+                </datalist>
+            </form>                           
+        </div><br>
+
+        <h3>29.9 - O elemento &lt;output></h3>
+        <p>O elemento &lt;output> representa o resultado de um cálculo (como aquele realizado por um script).</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form action="exemplos/actions.html" oninput="x.value=parseInt(a.value)+parseInt(b.value)"><br>
+            0<br>
+            &lt;input type="range"  id="a" name="a" value="50"><br>
+            100 +<br>
+            &lt;input type="number" id="b" name="b" value="50"><br>
+            =<br>
+            &lt;output name="x" for="a b">&lt;/output><br>
+            &lt;br>&lt;br><br>
+            &lt;input type="submit"><br>
+            &lt;/form><br>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form action="exemplos/actions.html" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0
+            <input type="range"  id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <br><br>
+            <input type="submit">
+            </form>               
+        </div>
+    </div><br>
 </body>
 </html>
