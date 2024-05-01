@@ -10,128 +10,201 @@
 <body>
     <h2 id="h2">30 - HTML Form Attributes</h2>
     <div class="explicacao-topico">
-        <h3>30.1 - O atributo de ação</h3>
+        <h3>30.1 - O atributo action</h3>
         <p>O atributo action define a ação a ser executada quando o formulário for enviado.</p>
         <p>Normalmente, os dados do formulário são enviados para um arquivo no servidor quando o usuário clica no botão enviar.</p>
         <p>Se o atributo action for omitido, a ação será definida para a página atual.</p>
         <p>No exemplo abaixo, os dados do formulário são enviados para um arquivo chamado “action_page.php”. Este arquivo contém um script do lado do servidor que trata os dados do formulário.</p>
 
-        <h3>28.2 - As diferenças mais importantes do HTML</h3>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form <b>action="/action_page.php"</b>><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="nome">Nome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="nome" name="nome" value="John">&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="sobrenome">Sobrenome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="sobrenome" name="sobrenome" value="Doe">&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Enviar"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form action="exemplos/actions.html">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" value="John"><br>
+                <label for="sobrenome">Sobrenome:</label><br>
+                <input type="text" id="sobrenome" name="sobrenome" value="Doe"><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div><br>
+
+        <h3>30.2 - O atributo target</h3>
+        <p>O atributo target especifica onde exibir a resposta recebida após o envio do formulário.</p>
+        <p>O targetatributo pode ter um dos seguintes valores:</p>
+        
+        <table>
+            <tr>
+              <th style="width:20%">Valor</th>
+              <th>Descrição</th>
+            </tr>
+            <tr>
+              <td>_em branco</td>
+              <td>A resposta é exibida em uma nova janela ou guia</td>
+            </tr>
+            <tr>
+              <td>_self</td>
+              <td>A resposta é exibida na janela atual</td>
+            </tr>
+            <tr>
+              <td>_parent</td>
+              <td>A resposta é exibida no quadro pai</td>
+            </tr>
+            <tr>
+              <td>_top</td>
+              <td>A resposta é exibida em todo o corpo da janela</td>
+            </tr>
+            <tr>
+              <td><i>nome do quadro</i></td>
+              <td>A resposta é exibida em um iframe nomeado</td>
+            </tr>
+        </table>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;form action="/action_page.php" <b>target="_blank"</b>><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="nome">Nome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="nome" name="nome" value="John">&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="sobrenome">Sobrenome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="sobrenome" name="sobrenome" value="Doe">&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Enviar"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form action="exemplos/actions.html" target="_blank">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" value="John"><br>
+                <label for="sobrenome">Sobrenome:</label><br>
+                <input type="text" id="sobrenome" name="sobrenome" value="Doe"><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div><br>
+
+        <h3>30.3 - O atributo method</h3>
+        <p>O atributo method especifica o método HTTP a ser usado ao enviar os dados do formulário.</p>
+        <p>Os dados do formulário podem ser enviados como variáveis ​​​​de URL (com method="get") ou como pós-transação HTTP (com method="post").</p>
+        <p>O método HTTP padrão ao enviar dados de formulário é GET. Porém sempre use POST se os dados do formulário contiverem informações confidenciais ou pessoais.</p>
+
+        <h4>Enviar via GET:</h4>
+        <div class="explicacao-tag">
+            &lt;form action="/action_page.php" <b>method="get"</b>><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="nome">Nome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="nome" name="nome" value="John">&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="sobrenome">Sobrenome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="sobrenome" name="sobrenome" value="Doe">&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Enviar"><br>
+            &lt;/form>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <form action="exemplos/actions.html" method="get">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" value="John"><br>
+                <label for="sobrenome">Sobrenome:</label><br>
+                <input type="text" id="sobrenome" name="sobrenome" value="Doe"><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        <h4>Informações sobre o GET</h4>
         <ul>
-            <li>&lt;!DOCTYPE> é obrigatório</li>
-            <li>O atributo xmlns em &lt;html> é obrigatório</li>
-            <li>&lt;html>, &lt;head>, &lt;title> e &lt;body> são obrigatórios</li>
-            <li>Os elementos devem sempre estar adequadamente aninhados</li>
-            <li>Os elementos devem estar sempre fechados</li>
-            <li>Os elementos devem estar sempre em letras minúsculas</li>
-            <li>Os nomes dos atributos devem estar sempre em letras minúsculas</li>
-            <li>Os valores dos atributos devem sempre ser citados</li>
-            <li>A minimização de atributos é proibida</li>
+            <li>Acrescenta os dados do formulário ao URL, em pares nome/valor</li>
+            <li>NUNCA use GET para enviar dados confidenciais! (os dados do formulário enviado ficam visíveis no URL!)</li>
+            <li>O comprimento de um URL é limitado (2.048 caracteres)</li>
+            <li>Útil para envios de formulários onde um usuário deseja marcar o resultado</li>
+            <li>GET é bom para dados não seguros, como strings de consulta no Google</li>
         </ul><br>
 
-        <h3>28.3 - Aqui está um documento XHTML com um mínimo de tags obrigatórias: </h3>
+        <h4>Enviar via POST:</h4>
         <div class="explicacao-tag">
-            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"<br>
-            "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><br>
-            &lt;html xmlns="http://www.w3.org/1999/xhtml"><br>
-            &lt;head><br>
-            &lt;title>Título do documento&lt;/title><br>
-            &lt;/head><br>
-            &lt;body><br><br>
-            
-            conteudo da página....<br><br>
-            
-            &lt;/body><br>
-            &lt;/html>
-        </div><br>
-
-        <h3>28.4 - Elementos XHTML devem ser aninhados corretamente</h3>
-        <h4>Correto:</h4>
-        <div class="explicacao-tag">
-            &lt;b>&lt;i>Conteúdo&lt;/i>&lt;/b>
+            &lt;form action="/action_page.php" <b>method="post"</b>><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="nome">Nome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="nome" name="nome" value="John">&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="sobrenome">Sobrenome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="sobrenome" name="sobrenome" value="Doe">&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Enviar"><br>
+            &lt;/form>
         </div>
 
-        <h4>Errado:</h4>
+        <h4>Exemplo:</h4>
         <div class="explicacao-tag">
-            &lt;b>&lt;i>Conteúdo&lt;/b>&lt;/i>
-        </div><br>
-
-        <h3>28.5 - Elementos XHTML devem sempre ser fechados</h3>
-        <h4>Correto:</h4>
-        <div class="explicacao-tag">
-            &lt;p>Isso é um parágrafo&lt;/p><br>
-            &lt;p>Contunuação do parágrafo&lt;/p>
+            <form action="exemplos/actions.html" method="post">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" value="John"><br>
+                <label for="sobrenome">Sobrenome:</label><br>
+                <input type="text" id="sobrenome" name="sobrenome" value="Doe"><br><br>
+                <input type="submit" value="Enviar">
+            </form>
         </div>
 
-        <h4>Errado:</h4>
-        <div class="explicacao-tag">
-            &lt;p>Isso é um parágrafo<br>
-            &lt;p>Contunuação do parágrafo
-        </div><br>
+        <h4>Informações sobre o POST</h4>
+        <ul>
+            <li>Acrescenta os dados do formulário ao corpo da solicitação HTTP (os dados do formulário enviado não são mostrados na URL)</li>
+            <li>POST não tem limitações de tamanho e pode ser usado para enviar grandes quantidades de dados.</li>
+            <li>Os envios de formulários com POST não podem ser marcados como favoritos</li>
+        </ul><br>
 
-        <h3>28.6 - Elementos vazios XHTML devem sempre ser fechados</h3>
-        <h4>Correto:</h4>
+        <h3>30.4 - O atributo autocomplete</h3>
+        <p>O atributo autocomplete especifica se um formulário deve ter o preenchimento automático ativado ou desativado.</p>
+        <p>Quando o preenchimento automático está ativado, o navegador completa automaticamente os valores com base nos valores inseridos anteriormente pelo usuário.</p>
+
+        <h4>Código:</h4>
         <div class="explicacao-tag">
-            Um br: &lt;br /><br>
-            Um hr: &lt;hr /><br>
-            Uma imagem: &lt;img src="happy.gif" alt="Happy face" />
+            &lt;form action="/action_page.php" <b>autocomplete="on"</b>><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="nome">Nome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="nome" name="nome">&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="sobrenome">Sobrenome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="sobrenome" name="sobrenome">&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Enviar"><br>
+            &lt;/form>
         </div>
 
-        <h4>Errado:</h4>
+        <h4>Exemplo:</h4>
         <div class="explicacao-tag">
-            Um br: &lt;br><br>
-            Um hr: &lt;hr><br>
-            Uma imagem: &lt;img src="happy.gif" alt="Happy face">
+            <form action="exemplos/actions.html" autocomplete="on">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome"><br>
+                <label for="sobrenome">Sobrenome:</label><br>
+                <input type="text" id="sobrenome" name="sobrenome"><br><br>
+                <input type="submit" value="Enviar">
+            </form>
         </div><br>
 
-        <h3>28.7 - Os elementos XHTML devem estar em letras minúsculas</h3>
-        <h4>Correto:</h4>
+        <h3>30.5 - O atributo novalidate</h3>
+        <p>O novalidate é um atributo booleano. Quando presente, especifica que os dados do formulário (entrada) não devem ser validados quando submetidos.</p>
+
+        <h4>Código:</h4>
         <div class="explicacao-tag">
-            &lt;body><br>
-                &lt;p>Isso é um parágrafo&lt;/p><br>
-            &lt;/body>                
+            &lt;form action="/action_page.php" <b>novalidate</b>><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="nome">Nome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="nome" name="nome" value="John">&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="sobrenome">Sobrenome:&lt;/label>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="sobrenome" name="sobrenome" value="Doe">&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Enviar"><br>
+            &lt;/form>
         </div>
 
-        <h4>Errado:</h4>
+        <h4>Exemplo:</h4>
         <div class="explicacao-tag">
-            &lt;BODY><br>
-                &lt;P>Isso é um parágrafo&lt;/P><br>
-            &lt;/BODY>                
-        </div><br>
-
-        <h3>28.8 - Os nomes dos atributos XHTML devem estar em letras minúsculas</h3>
-        <h4>Correto:</h4>
-        <div class="explicacao-tag">
-            &lt;a href="https://www.w3schools.com/html/">Visite o nosso tutorial de HTML&lt;/a>             
-        </div>
-
-        <h4>Errado:</h4>
-        <div class="explicacao-tag">
-            &lt;a HREF="https://www.w3schools.com/html/">Visite o nosso tutorial de HTML&lt;/a>              
-        </div><br>
-
-        <h3>28.9 - Valores de atributos XHTML devem ser citados entre aspas</h3>
-        <h4>Correto:</h4>
-        <div class="explicacao-tag">
-            &lt;a href="https://www.w3schools.com/html/">Visite o nosso tutorial de HTML&lt;/a>             
-        </div>
-
-        <h4>Errado:</h4>
-        <div class="explicacao-tag">
-            &lt;a href=https://www.w3schools.com/html/>Visite o nosso tutorial de HTML&lt;/a>                
-        </div><br>
-
-        <h3>28.9 - A minimização de atributos XHTML é proibida</h3>
-        <h4>Correto:</h4>
-        <div class="explicacao-tag">
-            &lt;input type="checkbox" name="vehicle" value="car" checked="checked" /><br>
-            &lt;input type="text" name="lastname" disabled="disabled" />
-        </div>
-
-        <h4>Errado:</h4>
-        <div class="explicacao-tag">
-            &lt;input type="checkbox" name="vehicle" value="car" checked /><br>
-            &lt;input type="text" name="lastname" disabled />               
+            <form action="exemplos/actions.html" novalidate>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" value="John"><br>
+                <label for="sobrenome">Sobrenome:</label><br>
+                <input type="text" id="sobrenome" name="sobrenome" value="Doe"><br><br>
+                <input type="submit" value="Enviar">
+            </form>
         </div><br>
     </div><br>
 </body>
