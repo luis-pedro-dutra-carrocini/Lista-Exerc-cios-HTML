@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Video</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/html.png">
 </head>
 <body>
-    
+    <h2 id="h2">38 - HTML Video</h2>
+    <div class="explicacao-topico">
+        <h3>38.1 - O elemento HTML &lt;vídeo></h3>
+        <p>O elemento HTML &lt;;video> é usado para mostrar um vídeo em uma página da web.</p>
+        <p>O controlsatributo adiciona controles de vídeo, como reproduzir, pausar e volume.</p>
+        <p>É uma boa ideia sempre incluir os atributos width e height. Se a altura e a largura não estiverem definidas, a página poderá piscar enquanto o vídeo é carregado.</p>
+        <p>O elemento &lt;source> permite que você especifique arquivos de vídeo alternativos que o navegador pode escolher. O navegador usará o primeiro formato reconhecido.</p>
+        <p>O texto entre as tags &lt;video> e &lt;/video> só será exibido em navegadores que não suportam o elemento &lt;video>.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;video width="320" height="240" controls><br>
+                &nbsp;&nbsp;&nbsp;&lt;source src="img/Ambulância_Besta_Chaves.mp4" type="video/mp4"><br>
+                &nbsp;&nbsp;&nbsp;Seu navegador não suporta vídeos.<br>
+            &lt;/video>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <video width="320" height="240" controls>
+                <source src="img/Ambulância_Besta_Chaves.mp4" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+        </div><br>
+
+
+        <h3>38.2 - Atributo autoplay</h3>
+        <p>Para iniciar um vídeo automaticamente, use o atributo autoplay. Os navegadores Chromium não permitem a reprodução automática na maioria dos casos. No entanto, a reprodução automática silenciada é sempre permitida.Adicione muted depois autoplay para permitir que seu vídeo comece a ser reproduzido automaticamente (mas sem som):</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;video width="320" height="240" controls autoplay muted><br>
+                &nbsp;&nbsp;&nbsp;&lt;source src="img/SeuMadruga_MenosAnimal.mp4" type="video/mp4"><br>
+                &nbsp;&nbsp;&nbsp;Seu navegador não suporta vídeos.<br>
+            &lt;/video>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <video width="320" height="240" controls autoplay muted>
+                <source src="img/SeuMadruga_MenosAnimal.mp4" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+        </div><br>
+
+        <h3>37.3 - Formatos multimídia</h3>
+        <p>Elementos multimídia (como áudio ou vídeo) são armazenados em arquivos de mídia. A maneira mais comum de descobrir o tipo de um arquivo é observar a extensão do arquivo. Os arquivos multimídia possuem formatos e extensões diferentes como: .wav, .mp3, .mp4, .mpg, .wmv e .avi.</p><br>
+
+        <h3>37.4 - Formatos de vídeo comuns</h3>
+        <p>Existem muitos formatos de vídeo por aí. Os formatos MP4, WebM e Ogg são suportados por HTML. O formato MP4 é recomendado pelo YouTube.</p><br>
+    </div><br>
 </body>
 </html>

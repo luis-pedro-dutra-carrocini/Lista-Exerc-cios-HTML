@@ -3,9 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Canvas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/html.png">
 </head>
 <body>
-    
+    <h2 id="h2">35 - HTML Canvas</h2>
+    <div class="explicacao-topico">
+        <h3>35.1 - Explicação Canvas</h3>
+        <p>O elemento HTML &lt;canvas> é usado para desenhar gráficos em uma página da web. É usado para desenhar gráficos dinamicamente, via JavaScript. Ele é apenas um contêiner para gráficos. Você deve usar JavaScript para realmente desenhar os gráficos. O Canvas possui vários métodos para desenhar caminhos, caixas, círculos, texto e adicionar imagens. Canvas é compatível com todos os principais navegadores.</p><br>
+
+        <h3>35.2 - Exemplos de tela</h3>
+        <p>Uma tela é uma área retangular em uma página HTML. Por padrão, uma tela não tem borda nem conteúdo.</p>
+        <p>Sempre especifique um idatributo (a ser referenciado em um script) e um atributo width e height para definir o tamanho da tela. Para adicionar uma borda, use o atributo style.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;canvas id="myCanvas" width="200" height="100" style="border: 2px solid black;">&lt;/canvas>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <canvas id="myCanvas" width="200" height="100" style="border: 2px solid black;"></canvas>
+        </div><br>
+
+        <h3>35.3 - Adicione um JavaScript</h3>
+        <p>Depois de criar a área retangular da tela, você deve adicionar um JavaScript para fazer o desenho.</p>
+        <p>Aqui estão alguns exemplos:</p>
+
+        <h4>Desenhe uma linha:</h4>
+        <div class="explicacao-tag">
+            &lt;canvas id="canvas_reta" width="200" height="100" style="background-color: rgb(234, 232, 236);">&lt;/canvas><br>
+            &lt;script><br>
+                &nbsp;&nbsp;&nbsp;var c = document.getElementById("canvas_reta");<br>
+                &nbsp;&nbsp;&nbsp;var ctx = c.getContext("2d");<br>
+                &nbsp;&nbsp;&nbsp;ctx.moveTo(0, 0);<br>
+                &nbsp;&nbsp;&nbsp;ctx.lineTo(200, 100);<br>
+                &nbsp;&nbsp;&nbsp;ctx.stroke();<br>
+            &lt;/script>
+        </div>
+
+        <h4>Resultado:</h4>
+        <div class="explicacao-tag">
+            <canvas id="canvas_reta" width="200" height="100" style="background-color: rgb(234, 232, 236);"></canvas>
+            <script>
+                var c = document.getElementById("canvas_reta");
+                var ctx = c.getContext("2d");
+                ctx.moveTo(0, 0);
+                ctx.lineTo(200, 100);
+                ctx.stroke();
+            </script>
+        </div><br>
+
+        <h4>Desenhar um círculo:</h4>
+        <div class="explicacao-tag">
+            &lt;canvas id="canvas_circulo" width="200" height="100" style="background-color: rgb(234, 232, 236);">&lt;/canvas><br>
+            &lt;script><br>
+                &nbsp;&nbsp;&nbsp;var c = document.getElementById("canvas_circulo");<br>
+                &nbsp;&nbsp;&nbsp;var ctx = c.getContext("2d");<br>
+                &nbsp;&nbsp;&nbsp;ctx.beginPath();<br>
+                &nbsp;&nbsp;&nbsp;ctx.arc(95, 50, 40, 0, 2 * Math.PI);<br>
+                &nbsp;&nbsp;&nbsp;ctx.stroke();<br>
+            &lt;/script>
+        </div>
+
+        <h4>Resultado:</h4>
+        <div class="explicacao-tag">
+            <canvas id="canvas_circulo" width="200" height="100" style="background-color: rgb(234, 232, 236);"></canvas>
+            <script>
+                var c = document.getElementById("canvas_circulo");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+                ctx.stroke();
+            </script>
+        </div><br>
+
+        <h4>Desenhe um texto:</h4>
+        <div class="explicacao-tag">
+            &lt;canvas id="canvas_frase" width="200" height="100" style="background-color: rgb(234, 232, 236);">&lt;/canvas><br>
+            &lt;script><br>
+                &nbsp;&nbsp;&nbsp;var c = document.getElementById("canvas_frase");<br>
+                &nbsp;&nbsp;&nbsp;var ctx = c.getContext("2d");<br>
+                &nbsp;&nbsp;&nbsp;ctx.font = "30px Arial";<br>
+                &nbsp;&nbsp;&nbsp;ctx.fillText("Hello World", 10, 50);<br>
+            &lt;/script>
+        </div>
+
+        <h4>Resultado:</h4>
+        <div class="explicacao-tag">
+            <canvas id="canvas_frase" width="200" height="100" style="background-color: rgb(234, 232, 236);"></canvas>
+            <script>
+                var c = document.getElementById("canvas_frase");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.fillText("Hello World", 10, 50);
+            </script>
+        </div><br>
+
+        <h4>Texto de traço:</h4>
+        <div class="explicacao-tag">
+            &lt;canvas id="canvas_texto_traco" width="200" height="100" style="background-color: rgb(234, 232, 236);">&lt;/canvas><br>
+            &lt;script><br>
+                &nbsp;&nbsp;&nbsp;var c = document.getElementById("canvas_texto_traco");<br>
+                &nbsp;&nbsp;&nbsp;var ctx = c.getContext("2d");<br>
+                &nbsp;&nbsp;&nbsp;ctx.font = "30px Arial";<br>
+                &nbsp;&nbsp;&nbsp;ctx.strokeText("Hello World", 10, 50);<br>
+            &lt;/script>
+        </div>
+
+        <h4>Resultado:</h4>
+        <div class="explicacao-tag">
+            <canvas id="canvas_texto_traco" width="200" height="100" style="background-color: rgb(234, 232, 236);"></canvas>
+            <script>
+                var c = document.getElementById("canvas_texto_traco");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.strokeText("Hello World", 10, 50);
+            </script>
+        </div><br>
+
+        <h4>Desenhar Degrade linear:</h4>
+        <div class="explicacao-tag">
+            &lt;canvas id="canvas_degrade" width="200" height="100">&lt;/canvas><br>
+            &lt;script><br>
+                &nbsp;&nbsp;&nbsp;var c = document.getElementById("canvas_degrade");<br>
+                &nbsp;&nbsp;&nbsp;var ctx = c.getContext("2d");<br><br>
+                
+                &nbsp;&nbsp;&nbsp;// Criando Degrade<br>
+                &nbsp;&nbsp;&nbsp;var grd = ctx.createLinearGradient(0, 0, 200, 0);<br>
+                &nbsp;&nbsp;&nbsp;grd.addColorStop(0, "blue");<br>
+                &nbsp;&nbsp;&nbsp;grd.addColorStop(1, "white");<br><br>
+                
+                &nbsp;&nbsp;&nbsp;// Preenchendo com o Degrade<br>
+                &nbsp;&nbsp;&nbsp;ctx.fillStyle = grd;<br>
+                &nbsp;&nbsp;&nbsp;ctx.fillRect(10, 10, 150, 80);<br>
+            &lt;/script>
+        </div>
+
+        <h4>Resultado:</h4>
+        <div class="explicacao-tag">
+            <canvas id="canvas_degrade" width="200" height="100"></canvas>
+            <script>
+                var c = document.getElementById("canvas_degrade");
+                var ctx = c.getContext("2d");
+                
+                // Criando Degrade
+                var grd = ctx.createLinearGradient(0, 0, 200, 0);
+                grd.addColorStop(0, "blue");
+                grd.addColorStop(1, "white");
+                
+                // Preenchendo com o Degrade
+                ctx.fillStyle = grd;
+                ctx.fillRect(10, 10, 150, 80);
+            </script>
+        </div><br>
+
+        <h4>Desenhar Degrade circular:</h4>
+        <div class="explicacao-tag">
+            &lt;canvas id="canvas_degrade_circular" width="200" height="100">&lt;/canvas><br>
+            &lt;script><br>
+                &nbsp;&nbsp;&nbsp;var c = document.getElementById("canvas_degrade_circular");<br>
+                &nbsp;&nbsp;&nbsp;var ctx = c.getContext("2d");<br><br>
+                
+                &nbsp;&nbsp;&nbsp;// Criando Degrade<br><br>
+                &nbsp;&nbsp;&nbsp;var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);<br>
+                &nbsp;&nbsp;&nbsp;grd.addColorStop(0, "green");<br>
+                &nbsp;&nbsp;&nbsp;grd.addColorStop(1, "white");<br><br>
+                
+                &nbsp;&nbsp;&nbsp;// Preenchendo com o Degrade<br>
+                &nbsp;&nbsp;&nbsp;ctx.fillStyle = grd;<br>
+                &nbsp;&nbsp;&nbsp;ctx.fillRect(10, 10, 150, 80);<br>
+            &lt;/script>
+        </div>
+
+        <h4>Resultado:</h4>
+        <div class="explicacao-tag">
+            <canvas id="canvas_degrade_circular" width="200" height="100"></canvas>
+            <script>
+                var c = document.getElementById("canvas_degrade_circular");
+                var ctx = c.getContext("2d");
+                
+                // Criando Degrade
+                var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+                grd.addColorStop(0, "green");
+                grd.addColorStop(1, "white");
+                
+                // Preenchendo com o Degrade
+                ctx.fillStyle = grd;
+                ctx.fillRect(10, 10, 150, 80);
+            </script>
+        </div><br>
+
+        <h4>Desenhar imagem:</h4>
+        <div class="explicacao-tag">
+            &lt;p>Imagem a ser exibida:&lt;/p><br>
+            &lt;img id="imagem" src="img/flores_china.jpg" alt="Flores na China" width="300" height="250"><br><br>
+
+            &lt;p>Canvas a ser preenchido:&lt;/p><br>
+            &lt;canvas id="Canvas" width="300" height="250"style="border:1px solid #d3d3d3;">Seu navegador não suporta JavaScript (Mensagem a ser exibida caso o Javascript não puder ser executado.&lt;/canvas><br><br>
+
+            &lt;p>&lt;button onclick="Exibir_Imagem()">Exibir&lt;/button>&lt;/p><br><br>
+
+            &lt;script><br>
+            function Exibir_Imagem() {<br>
+                &nbsp;&nbsp;&nbsp;var c = document.getElementById("Canvas");<br>
+                &nbsp;&nbsp;&nbsp;var ctx = c.getContext("2d");<br>
+                &nbsp;&nbsp;&nbsp;var img = document.getElementById("imagem");<br>
+                &nbsp;&nbsp;&nbsp;ctx.drawImage(img,10,10);<br>
+            }<br>
+            &lt;/script>
+        </div>
+
+        <h4>Resultado:</h4>
+        <div class="explicacao-tag">
+            <p>Imagem a ser exibida:</p>
+            <img id="imagem" src="img/flores_china.jpg" alt="Flores na China" width="300" height="250">
+
+            <p>Canvas a ser preenchido:</p>
+            <canvas id="Canvas" width="300" height="250"style="border:1px solid #d3d3d3;">Seu navegador não suporta JavaScript (Mensagem a ser exibida caso o Javascript não puder ser executado.</canvas>
+
+            <p><button onclick="Exibir_Imagem()">Exibir</button></p>
+
+            <script>
+            function Exibir_Imagem() {
+                var c = document.getElementById("Canvas");
+                var ctx = c.getContext("2d");
+                var img = document.getElementById("imagem");
+                ctx.drawImage(img,10,10);
+            }
+            </script>
+        </div><br>
+    </div><br>
 </body>
 </html>
