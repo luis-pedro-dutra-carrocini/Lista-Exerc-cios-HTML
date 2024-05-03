@@ -14,6 +14,16 @@ Para obter uma cópia basta baixar os arquivos todos os arquivos e pastas contid
 
 <img src="/prints/print1.png">
 
+<img src="/prints/print2.png">
+
+<img src="/prints/print3.png">
+
+<img src="/prints/print4.png">
+
+<img src="/prints/print5.png">
+
+<img src="/prints/print6.png">
+
 
 ## 🛠️ Construído com
 
