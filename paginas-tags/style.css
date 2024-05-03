@@ -1,43 +1,39 @@
 body{
-    background-color: #7B85AD;
+    background-color: #80C18F;
     height: 100%;
     margin: 0;
     padding-right: 10px;
-    font-family: Arial, sans-serif;
-}
-
-#h1{
-    text-align: center;
-    background-color: #515E91;
-    padding: 7px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #h2{
     padding: 7px;
-    background-color: #515E91;
+    background-color: #479030;
     margin: 0;
     margin-top: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
+    font-size: 30px;
+    text-align: center;
 }
 
 .explicacao-tag{
     padding: 15px;
     padding-left: 15px;
-    background-color: rgb(218, 215, 215);
+    background-color: #80C18F;
     border-radius: 10px;
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
+    border: 2px solid #479030;
 }
 
 .explicacao-topico{
-    padding: 7px;
-    background-color: rgb(194, 194, 194);
+    padding: 10px;
+    background-color: #75B095;
     margin: 0;
     padding-bottom: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
 }
 
 table{
@@ -46,51 +42,87 @@ table{
     border-collapse: collapse;
 }
 
-td, th{
+th{
     padding: 10px;
-    background-color: #96D4D4;
+    background-color: #6a9e72;
+    border: 1px solid black;
+}
+
+td{
+    padding: 10px;
+    background-color: #87c991;
     border: 1px solid black;
 }
   
-  .sidenav {
+.sidenav {
     height: 100%;
     width: 235px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #00130a;
     overflow-x: hidden;
-    padding-top: 20px;
-  }
+    padding-top: 10px;
+}
   
-  .sidenav a {
-    padding: 3px 3px 3px 15px;
+.sidenav a {
+    padding: 6px 3px 3px 15px;
     text-decoration: none;
     font-size: 17px;
     color: #818181;
     display: block;
-  }
+}
   
-  .sidenav a:hover {
+.sidenav a:hover {
     color: #f1f1f1;
-  }
+    background-color: #479030;
+}
   
-  .main {
+.main {
     margin-left: 235px; /* Same as the width of the sidenav */
-  }
+}
   
-  @media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+}
 
 .content {
   margin-left: 250px;
-  padding: 20px;
+  padding: 0px;
+  height: 625px
 }
 
 .content iframe {
   width: 100%;
-  height: calc(100% - 40px);
+  height: 100%;
+  border: none;
+}
+
+li{
+  font-size: 17px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+p{
+  font-size: 18px;
+}
+
+h3{
+  font-size: 25px;
+}
+
+h4{
+  margin-bottom: 2px;
+  font-size: 20px;
+}
+
+.sidenav p{
+  padding: 3px 3px 3px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
 }

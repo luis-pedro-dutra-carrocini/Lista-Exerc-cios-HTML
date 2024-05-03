@@ -4,55 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TG's Básicas do HTML</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="paginas-tags/style.css"">
     <link rel="icon" type="image/png" href="paginas-tags/img/html.png">
+
+    <script>
+        elementoAnterior = null;
+        function mudarCor(elemento) {
+            if (elementoAnterior !== null){
+                elementoAnterior.style.color = "#818181";
+                elementoAnterior.style.backgroundColor = "#00130a";
+            }
+
+            elemento.style.color = "#f1f1f1";
+            elemento.style.backgroundColor = "#479030";
+
+            elementoAnterior = elemento;
+        }
+    </script>
 </head>
 <body>
 
 <div class="sidenav">
     <p><b>TG's HTML</b></p>
-    <a href="paginas-tags/basic.html" target="content">HTML Basic</a>
-    <a href="paginas-tags/elements.html" target="content">HTML Elements</a>
-    <a href="paginas-tags/attributes.html" target="content">HTML Attributes</a>
-    <a href="paginas-tags/headings.html" target="content">HTML Headings</a>
-    <a href="paginas-tags/paragraphs.html" target="content">HTML Paragraphs</a>
-    <a href="paginas-tags/styles.html" target="content">HTML Styles</a>
-    <a href="paginas-tags/formatting.html" target="content">HTML Formatting</a>
-    <a href="paginas-tags/quotations.html" target="content">HTML Quotations</a>
-    <a href="paginas-tags/comments.html" target="content">HTML Comments</a>
-    <a href="paginas-tags/colors.html" target="content">HTML Colors</a>
-    <a href="paginas-tags/links.html" target="content">HTML Links</a>
-    <a href="paginas-tags/favicon.html" target="content">HTML Favicon</a>
-    <a href="paginas-tags/table.html" target="content">HTML Table</a>
-    <a href="paginas-tags/list.html" target="content">HTML List</a>
-    <a href="paginas-tags/block_e_inline.html" target="content">HTML Block & Inline</a>
-    <a href="paginas-tags/div.html" target="content">HTML Div</a>
-    <a href="paginas-tags/classes.html" target="content">HTML Classes</a>
-    <a href="paginas-tags/id.html" target="content">HTML Id</a>
-    <a href="paginas-tags/iframes.html" target="content">HTML Iframes</a>
-    <a href="paginas-tags/javascript.html" target="content">HTML JavaScript</a>
-    <a href="paginas-tags/semantics.html" target="content">HTML Semantics</a>
-    <a href="paginas-tags/style_guide.html" target="content">HTML Style Guide</a>
-    <a href="paginas-tags/entities.html" target="content">HTML Entities</a>
-    <a href="paginas-tags/symbols.html" target="content">HTML Symbols</a>
-    <a href="paginas-tags/emojis.html" target="content">HTML Emojis</a>
-    <a href="paginas-tags/charsets.html" target="content">HTML Charsets</a>
-    <a href="paginas-tags/url_encode.html" target="content">HTML URL Encode</a>
-    <a href="paginas-tags/html_vs_xhtml.html" target="content">HTML vs XHTML</a>
-    <a href="paginas-tags/forms.html" target="content">HTML Forms</a>
-    <a href="paginas-tags/form_attributes.html" target="content">HTML Form Attributes</a>
-    <a href="paginas-tags/form_elements.html" target="content">HTML Form Elements</a>
-    <a href="paginas-tags/input_types.html" target="content">HTML Input Types</a>
-    <a href="paginas-tags/input_attributes.html" target="content">HTML Input Attributes</a>
-    <a href="paginas-tags/form_attributes.html" target="content">Input Form Attributes</a>
-    <a href="paginas-tags/canvas.html" target="content">HTML Canvas</a>
-    <a href="paginas-tags/svg.html" target="content">HTML SVG</a>
-    <a href="paginas-tags/media.html" target="content">HTML Media</a>
-    <a href="paginas-tags/video.html" target="content">HTML Video</a>
-    <a href="paginas-tags/audio.html" target="content">HTML Audio</a>
-    <a href="paginas-tags/drag_drop.html" target="content">HTML Drag/Drop</a>
+    <a href="paginas-tags/basic.html" target="content" id="link1" onclick="mudarCor(this)">HTML Basic</a>
+    <a href="paginas-tags/elements.html" target="content" id="link2" onclick="mudarCor(this)">HTML Elements</a>
+    <a href="paginas-tags/attributes.html" target="content" id="link3" onclick="mudarCor(this)">HTML Attributes</a>
+    <a href="paginas-tags/headings.html" target="content" id="link4" onclick="mudarCor(this)">HTML Headings</a>
+    <a href="paginas-tags/paragraphs.html" target="content" id="link5" onclick="mudarCor(this)">HTML Paragraphs</a>
+    <a href="paginas-tags/styles.html" target="content" id="link6" onclick="mudarCor(this)">HTML Styles</a>
+    <a href="paginas-tags/formatting.html" target="content" id="link7" onclick="mudarCor(this)">HTML Formatting</a>
+    <a href="paginas-tags/quotations.html" target="content" id="link8" onclick="mudarCor(this)">HTML Quotations</a>
+    <a href="paginas-tags/comments.html" target="content" id="link9" onclick="mudarCor(this)">HTML Comments</a>
+    <a href="paginas-tags/colors.html" target="content" id="link10" onclick="mudarCor(this)">HTML Colors</a>
+    <a href="paginas-tags/links.html" target="content" id="link11" onclick="mudarCor(this)">HTML Links</a>
+    <a href="paginas-tags/favicon.html" target="content" id="link12" onclick="mudarCor(this)">HTML Favicon</a>
+    <a href="paginas-tags/table.html" target="content" id="link13" onclick="mudarCor(this)">HTML Table</a>
+    <a href="paginas-tags/list.html" target="content" id="link14" onclick="mudarCor(this)">HTML List</a>
+    <a href="paginas-tags/block_e_inline.html" target="content5" id="link1" onclick="mudarCor(this)">HTML Block & Inline</a>
+    <a href="paginas-tags/div.html" target="content" id="link16" onclick="mudarCor(this)">HTML Div</a>
+    <a href="paginas-tags/classes.html" target="content" id="link17" onclick="mudarCor(this)">HTML Classes</a>
+    <a href="paginas-tags/id.html" target="content" id="link18" onclick="mudarCor(this)">HTML Id</a>
+    <a href="paginas-tags/iframes.html" target="content" id="link19" onclick="mudarCor(this)">HTML Iframes</a>
+    <a href="paginas-tags/javascript.html" target="content" id="link20" onclick="mudarCor(this)">HTML JavaScript</a>
+    <a href="paginas-tags/semantics.html" target="content" id="link21" onclick="mudarCor(this)">HTML Semantics</a>
+    <a href="paginas-tags/style_guide.html" target="content" id="link22" onclick="mudarCor(this)">HTML Style Guide</a>
+    <a href="paginas-tags/entities.html" target="content" id="link23" onclick="mudarCor(this)">HTML Entities</a>
+    <a href="paginas-tags/symbols.html" target="content" id="link24" onclick="mudarCor(this)">HTML Symbols</a>
+    <a href="paginas-tags/emojis.html" target="content" id="link25" onclick="mudarCor(this)">HTML Emojis</a>
+    <a href="paginas-tags/charsets.html" target="content" id="link26" onclick="mudarCor(this)">HTML Charsets</a>
+    <a href="paginas-tags/url_encode.html" target="content" id="link27" onclick="mudarCor(this)">HTML URL Encode</a>
+    <a href="paginas-tags/html_vs_xhtml.html" target="content" id="link28" onclick="mudarCor(this)">HTML vs XHTML</a>
+    <a href="paginas-tags/forms.html" target="content" id="link29" onclick="mudarCor(this)">HTML Forms</a>
+    <a href="paginas-tags/form_attributes.html" target="content" id="link30" onclick="mudarCor(this)">HTML Form Attributes</a>
+    <a href="paginas-tags/form_elements.html" target="content" id="link31" onclick="mudarCor(this)">HTML Form Elements</a>
+    <a href="paginas-tags/input_types.html" target="content" id="link32" onclick="mudarCor(this)">HTML Input Types</a>
+    <a href="paginas-tags/input_attributes.html" target="content" id="link33" onclick="mudarCor(this)">HTML Input Attributes</a>
+    <a href="paginas-tags/form_attributes.html" target="content" id="link34" onclick="mudarCor(this)">Input Form Attributes</a>
+    <a href="paginas-tags/canvas.html" target="content" id="link35" onclick="mudarCor(this)">HTML Canvas</a>
+    <a href="paginas-tags/svg.html" target="content" id="link36" onclick="mudarCor(this)">HTML SVG</a>
+    <a href="paginas-tags/media.html" target="content" id="link37" onclick="mudarCor(this)">HTML Media</a>
+    <a href="paginas-tags/video.html" target="content" id="link38" onclick="mudarCor(this)">HTML Video</a>
+    <a href="paginas-tags/audio.html" target="content" id="link39" onclick="mudarCor(this)">HTML Audio</a>
+    <a href="paginas-tags/drag_drop.html" target="content" id="link40" onclick="mudarCor(this)">HTML Drag/Drop</a>
     <br><br><br>
 </div>
+
 
 <div class="content" id="content">
     <iframe src="paginas-tags/introducao.html" name="content" frameborder="0" width="100%" height="100%"></iframe>

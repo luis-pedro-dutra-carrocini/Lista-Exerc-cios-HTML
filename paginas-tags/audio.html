@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Audio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/html.png">
 </head>
 <body>
-    
+    <h2 id="h2">39 - HTML Audio</h2>
+    <div class="explicacao-topico">
+        <h3>39.1 - O elemento HTML &lt;audio></h3>
+        <p>Para reproduzir um arquivo de áudio em HTML, use o elemento &lt;audio>.</p>
+        <p>O atributo controls adiciona controles de áudio, como reproduzir, pausar e volume.</p>
+        <p>O elemento &lt;source> permite que você especifique arquivos de áudio alternativos que o navegador pode escolher. O navegador usará o primeiro formato reconhecido.</p>
+        <p>O texto entre as tags &lt;audio> e &lt;/audio> só será exibido em navegadores que não suportam o elemento</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;audio controls><br>
+                &nbsp;&nbsp;&nbsp;&lt;source src="img/SeuMadruga_Nossa.mp3" type="audio/mpeg"><br>
+                &nbsp;&nbsp;&nbsp;Seu navegador não suporta áudios.<br>
+            &lt;/audio>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <audio controls>
+                <source src="img/SeuMadruga_Nossa.mp3" type="audio/mpeg">
+              Seu navegador não suporta áudios.
+            </audio>
+        </div><br>
+
+
+        <h3>39.2 - Atributo autoplay</h3>
+        <p>Para iniciar um arquivo de áudio automaticamente, use o atributo autoplay. Os navegadores Chromium não permitem a reprodução automática na maioria dos casos. No entanto, a reprodução automática silenciada é sempre permitida. Adicione muted depois autoplay para permitir que seu vídeo comece a ser reproduzido automaticamente (mas sem som):</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;audio width="320" height="240" controls autoplay muted><br>
+                &nbsp;&nbsp;&nbsp;&lt;source src="img/SeuMadruga_Nossa.mp3" type="audio/mp4"><br>
+                &nbsp;&nbsp;&nbsp;Seu navegador não suporta áudios.<br>
+            &lt;/audio>
+        </div>
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag">
+            <audio width="320" height="240" controls autoplay muted>
+                <source src="img/SeuMadruga_Nossa.mp3" type="audio/mp4">
+              Seu navegador não suporta áudios.
+            </audio>
+        </div><br>
+
+        <h3>39.3 - Tipos de mídia</h3>
+        <table>
+            <tr>
+                <th>Formato do Arquivo</th>
+                <th>Media Type</th>
+            </tr>
+            <tr>
+                <td>MP3</td>
+                <td>audio/mpeg</td>
+            </tr>
+            <tr>
+                <td>OGG</td>
+                <td>audio/ogg</td>
+            </tr>
+            <tr>
+                <td>WAV</td>
+                <td>audio/wav</td>
+            </tr>
+        </table>
+
+        <h3>39.4 - Métodos, Propriedades e Eventos</h3>
+        <p>O HTML DOM define métodos, propriedades e eventos para o elemento &lt;audio>.</p>
+        <p>Isso permite carregar, reproduzir e pausar áudios, bem como definir duração e volume. Existem também eventos DOM que podem notificá-lo quando um vídeo começa a ser reproduzido, é pausado, etc.</p>
+    </div><br>
 </body>
 </html>

@@ -3,9 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Drag/Drop</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/html.png">
 </head>
 <body>
-    
+    <h2 id="h2">40 - HTML Drag/Drop</h2>
+    <div class="explicacao-topico">
+        <h3>40.1 - API de arrastar e soltar HTML</h3>
+        <p>Em HTML, qualquer elemento pode ser arrastado e solto.</p>
+        <p>Arrastar e soltar é um recurso muito comum. É quando você “pega” um objeto e o arrasta para um local diferente.</p>
+
+        <h3>40.2 - Tornar um elemento arrastável</h3>
+        <p>Primeiro de tudo: para tornar um elemento arrastável, defina o atributo draggable como verdadeiro:</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;img draggable="true">
+        </div><br>
+
+        <h3>40.3 - O que arrastar - Ondragstart e setData()</h3>
+        <p>Em seguida, especifique o que deve acontecer quando o elemento for arrastado.</p>
+        <p>No exemplo aser mostrado, o atributo ondragstart chama uma função, drag(event), que especifica quais dados serão arrastados.</p>
+        <p>Neste caso, o tipo de dados é “texto” e o valor é o id do elemento arrastável (“arrastar1”).</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            function drag(ev) {<br>
+                &nbsp;&nbsp;&nbsp;ev.dataTransfer.setData("text", ev.target.id);<br>
+            }
+        </div><br>
+
+        <h3>40.4 - Onde largar - ondragover</h3>
+        <p>O evento ondragover especifica onde os dados arrastados podem ser descartados.</p>
+        <p>Por padrão, dados/elementos não podem ser descartados em outros elementos. Para permitir uma queda, devemos evitar o tratamento padrão do elemento.</p>
+        <p>Isso é feito chamando o método event.preventDefault() do evento ondragover:</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            event.preventDefault()
+        </div><br>
+
+        <h3>40.5 - Faça o Drop - ondrop</h3>
+        <p>Quando os dados arrastados são descartados, ocorre um evento de descarte.</p>
+        <p>No exemplo aser mostrado, o atributo ondrop chama uma função, drop(event):</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            function drop(ev) {<br>
+                &nbsp;&nbsp;&nbsp;ev.preventDefault();<br>
+                &nbsp;&nbsp;&nbsp;var data = ev.dataTransfer.getData("text");<br>
+                &nbsp;&nbsp;&nbsp;ev.target.appendChild(document.getElementById(data));<br>
+            }
+        </div>
+
+        <p>Código explicado:</p>
+        <ul>
+            <li>Chame preventDefault() para evitar que o navegador manipule os dados por padrão (o padrão é abrir como link ao soltar)</li>
+            <li>Obtenha os dados arrastados com o método dataTransfer.getData(). Este método retornará quaisquer dados que foram definidos com o mesmo tipo no método setData()</li>
+            <li>Os dados arrastados são o id do elemento arrastado ("drag1")</li>
+            <li>Anexe o elemento arrastado ao elemento suspenso</li>
+        </ul><br>
+
+        <h3>40.6 - Exemplo</h3>
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            function drop(ev) {<br>
+                &nbsp;&nbsp;&nbsp;ev.preventDefault();<br>
+                &nbsp;&nbsp;&nbsp;var data = ev.dataTransfer.getData("text");<br>
+                &nbsp;&nbsp;&nbsp;ev.target.appendChild(document.getElementById(data));<br>
+            }
+        </div>
+
+
+        <h4>Exemplo:</h4>
+        <div class="explicacao-tag" style="height: 200px;">
+            <style>
+                #div1, #div2 {
+                  float: left;
+                  width: 100px;
+                  height: 35px;
+                  margin: 10px;
+                  padding: 10px;
+                  border: 1px solid black;
+                }
+            </style>
+
+            <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+                
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+                
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+            </script>
+                
+            <h2>Drag e Drop</h2>
+            <p>Arraste a imagem para frente e para trás entre os dois elementos div.</p>
+                
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="img/html.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+            </div>
+                
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+    </div><br>
 </body>
 </html>

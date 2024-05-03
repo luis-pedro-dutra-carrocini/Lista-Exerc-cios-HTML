@@ -53,11 +53,107 @@
             </video>
         </div><br>
 
-        <h3>37.3 - Formatos multimídia</h3>
-        <p>Elementos multimídia (como áudio ou vídeo) são armazenados em arquivos de mídia. A maneira mais comum de descobrir o tipo de um arquivo é observar a extensão do arquivo. Os arquivos multimídia possuem formatos e extensões diferentes como: .wav, .mp3, .mp4, .mpg, .wmv e .avi.</p><br>
+        <h3>38.3 - Tipos de mídia</h3>
+        <table>
+            <tr>
+                <th>Formato do Arquivo</th>
+                <th>Media Type</th>
+            </tr>
+            <tr>
+                <td>MP4</td>
+                <td>video/mp4</td>
+            </tr>
+            <tr>
+                <td>WebM</td>
+                <td>video/webm</td>
+            </tr>
+            <tr>
+                <td>Ogg</td>
+                <td>video/ogg</td>
+            </tr>
+        </table>
 
-        <h3>37.4 - Formatos de vídeo comuns</h3>
-        <p>Existem muitos formatos de vídeo por aí. Os formatos MP4, WebM e Ogg são suportados por HTML. O formato MP4 é recomendado pelo YouTube.</p><br>
+        <h3>38.4 - Métodos, Propriedades e Eventos</h3>
+        <p>O HTML DOM define métodos, propriedades e eventos para o elemento &lt;video>.</p>
+        <p>Isso permite carregar, reproduzir e pausar vídeos, bem como definir duração e volume. Existem também eventos DOM que podem notificá-lo quando um vídeo começa a ser reproduzido, é pausado, etc.</p>
+
+        <h4>Código:</h4>
+        <div class="explicacao-tag">
+            &lt;div style="text-align:center"><br>
+                &nbsp;&nbsp;&nbsp;&lt;button onclick="PlayPausar()">Play/Pause&lt;/button><br>
+                &nbsp;&nbsp;&nbsp;&lt;button onclick="Aumentar()">Big&lt;/button><br>
+                &nbsp;&nbsp;&nbsp;&lt;button onclick="Diminuir()">Small&lt;/button><br>
+                &nbsp;&nbsp;&nbsp;&lt;button onclick="Normalizar()">Normal&lt;/button><br>
+                &nbsp;&nbsp;&nbsp;&lt;br>&lt;br><br>
+                &nbsp;&nbsp;&nbsp;&lt;video id="video" width="420"><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="img/trailer_chapolin.mp4" type="video/mp4"><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seu navegador não suporta vídeo<br>
+                &nbsp;&nbsp;&nbsp;&lt;/video><br>
+            &lt;/div> <br><br>
+              
+            &lt;script> <br>
+              &nbsp;&nbsp;&nbsp;var video = document.getElementById("video"); <br><br>
+              
+              &nbsp;&nbsp;&nbsp;function PlayPausar() { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (video.paused){ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video.play(); <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video.pause(); <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;} <br><br>
+              
+              &nbsp;&nbsp;&nbsp;function Aumentar() { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video.width = 560; <br>
+              &nbsp;&nbsp;&nbsp;} <br><br>
+              
+              &nbsp;&nbsp;&nbsp;function Diminuir() { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video.width = 320; <br>
+              &nbsp;&nbsp;&nbsp;} <br>
+              
+              &nbsp;&nbsp;&nbsp; function Normalizar() { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video.width = 420; <br>
+              &nbsp;&nbsp;&nbsp;} <br>
+            &lt;/script> 
+        </div>
+
+        <h4>Exemplo com JavaScript:</h4>
+        <div class="explicacao-tag">
+            <div style="text-align:center"> 
+                <button onclick="PlayPausar()">Play/Pause</button> 
+                <button onclick="Aumentar()">Big</button>
+                <button onclick="Diminuir()">Small</button>
+                <button onclick="Normalizar()">Normal</button>
+                <br><br>
+                <video id="video" width="420">
+                  <source src="img/trailer_chapolin.mp4" type="video/mp4">
+                  Seu navegador não suporta vídeo
+                </video>
+            </div> 
+              
+            <script> 
+              var video = document.getElementById("video"); 
+              
+              function PlayPausar() { 
+                if (video.paused){ 
+                  video.play(); 
+                }else {
+                  video.pause(); 
+                }
+              } 
+              
+              function Aumentar() { 
+                  video.width = 560; 
+              } 
+              
+              function Diminuir() { 
+                  video.width = 320; 
+              } 
+              
+              function Normalizar() { 
+                  video.width = 420; 
+              } 
+            </script> 
+        </div><br>
     </div><br>
 </body>
 </html>
